@@ -3,6 +3,7 @@ FROM openjdk:11-slim
 # Install necessary dependencies
 RUN apt-get update && apt-get install -y \
     curl \
+    zip \
     unzip \
     git \
     graphviz \
