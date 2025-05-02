@@ -4,10 +4,12 @@
     "description": "",
     "tooltip": "",
     "logoLink": "https://avatars.githubusercontent.com/Multiverse-io",
-    "links": [{
+    "links": [
+      {
         "label": "github.com/Multiverse-io",
         "href": "https://github.com/Multiverse-io"
-      }]
+      }
+    ]
   },
   "analysisRoot": ".",
   "repositoryReportsUrlPrefix": "../",
