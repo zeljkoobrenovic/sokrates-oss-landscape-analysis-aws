@@ -21,9 +21,9 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 WORKDIR /app
 
 # Clone the repository
-# RUN git clone https://github.com/zeljkoobrenovic/sokrates-oss-landscape-analysis-aws.git /app
-ADD ./* /app/
+RUN git clone https://github.com/zeljkoobrenovic/sokrates-oss-landscape-analysis-aws.git /app
 
+RUN rm /app/analysis-scripts/config.json
 
 # Download the Sokrates CLI JAR
 RUN curl https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar --output sokrates-LATEST.jar
