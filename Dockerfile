@@ -25,7 +25,7 @@ RUN if [ "$(uname -m)" = "aarch64" ] || [ "$(uname -m)" = "arm64" ]; then \
 # Set up working directory
 WORKDIR /app
 
-ADD run.sh run.sh
+ADD start.sh start.sh
 
 # Set default command
-CMD ["bash", "run.sh"]
+CMD ["bash", "start.sh"]
