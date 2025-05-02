@@ -2,6 +2,14 @@
 
 This project provides a template you can use to analyze, with [Sokrates](https://sokrates.dev), all source code of all repositories in any GitHub organization.
 
+### Create Docket Image
+
+<pre>docker build -t sokrates-landscape .</pre>
+
+### Running
+
+<pre style="white-space: normal">docker run -v $(pwd)/config.json:/app/analysis-scripts/config.json -e AWS_ACCESS_KEY_ID=<ID> -e AWS_SECRET_ACCESS_KEY=<SECRET_KEY> -e AWS_S3_EXPORT_URI=<S3_URI> sokrates-landscape</pre>
+
 ### The Concept
 
 The project analyzes all repositories in given GitHub organizations. For each repository, it creates a detailed project report. It puts all reports in a folder, where you can run `sokrates updateLandscape` command to create a landscape overview of the whole organization (volume, project trends, team topologies...).

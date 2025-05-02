@@ -1,3 +1,5 @@
+echo "$SOKRATES_CONFIG" > /app/analysis-scripts/config.json
+
 bash run-generate-scripts.sh
 bash run-execute-scripts.sh
 
