@@ -11,8 +11,12 @@ RUN apt-get update && apt-get install -y \
     bash \
     && rm -rf /var/lib/apt/lists/*
 
-# Install AWS CLI v2
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+# Detect architecture and install appropriate AWS CLI version
+RUN if [ "$(uname -m)" = "aarch64" ] || [ "$(uname -m)" = "arm64" ]; then \
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip"; \
+    else \
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"; \
+    fi && \
     unzip awscliv2.zip && \
     ./aws/install && \
     rm -rf awscliv2.zip aws
@@ -29,7 +33,7 @@ RUN rm /app/analysis-scripts/config.json
 RUN curl https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar --output sokrates-LATEST.jar
 
 # Create a volume for config and output
-VOLUME ["/app/analysis-scripts/config.json", "/app/analysis-artifacts"]
+VOLUME ["/app/analysis-scripts/config.json"]
 
 # Set default command
 CMD ["bash", "run.sh"]
