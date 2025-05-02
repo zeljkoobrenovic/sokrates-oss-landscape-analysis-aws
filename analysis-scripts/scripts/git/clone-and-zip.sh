@@ -11,7 +11,6 @@ fi
 mkdir /app/analysis-artifacts
 mkdir /app/analysis-artifacts/archived-repos
 mkdir /app/analysis-artifacts/archived-repos/$1
-rm -rf /app/analysis-artifacts/archived-repos/$1/$2
 mkdir /app/analysis-artifacts/archived-repos/$1/$2
 mkdir /app/analysis-artifacts/archived-repos/$1/$2/timestamps
 

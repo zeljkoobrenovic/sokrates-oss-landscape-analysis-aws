@@ -14,12 +14,10 @@ mkdir /app/analysis-artifacts/temp
 
 mkdir /app/analysis-artifacts/reports/$1
 
-rm -rf /app/analysis-artifacts/reports/$1/$2
 mkdir /app/analysis-artifacts/reports/$1/$2
 mkdir /app/analysis-artifacts/reports/$1/$2/timestamps
 
 # create a temporary analysis folder
-rm -rf /app/analysis-artifacts/temp/analysis_$1_$2
 mkdir /app/analysis-artifacts/temp/analysis_$1_$2
 
 cp /app/analysis-scripts/scripts/analysis/sokrates_conventions.json /app/analysis-artifacts/temp/analysis_$1_$2
