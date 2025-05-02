@@ -1,7 +1,7 @@
 const https = require('https');
 const fs = require('fs');
 
-const config = JSON.parse(fs.readFileSync('../config.json'));
+const config = JSON.parse(fs.readFileSync('/app/analysis-scripts/config.json'));
 
 const gitRepoPrefix = config.githubApiUrl + '/orgs/';
 const startDate = config.reposUpdatedAfter;
@@ -48,7 +48,7 @@ const saveRepositories = function (org, next) {
                     repos = repos.concat(reposPage);
                     console.log(repos.length);
 
-                    const githubRepoDataFolder = '../generated/data/config-repos/';
+                    const githubRepoDataFolder = '/app/analysis-scripts/generated/data/config-repos/';
                     if (!fs.existsSync(githubRepoDataFolder)) fs.mkdirSync(githubRepoDataFolder, {recursive: true});
                     let mappedData = repos.map(repo => {
                         return {

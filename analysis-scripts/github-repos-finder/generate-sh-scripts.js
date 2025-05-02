@@ -1,9 +1,9 @@
 const fs = require('fs');
 
-const config = JSON.parse(fs.readFileSync('../config.json'));
+const config = JSON.parse(fs.readFileSync('/app/analysis-scripts/config.json'));
 
-const runAnalysisLinePrefix = 'bash ../../scripts/analysis/run-analysis-from-zip.sh ';
-const cloneAndDownloadLinePrefix = 'bash ../../scripts/git/clone-and-zip.sh ';
+const runAnalysisLinePrefix = 'bash /app/analysis-scripts/scripts/analysis/run-analysis-from-zip.sh ';
+const cloneAndDownloadLinePrefix = 'bash /app/analysis-scripts/scripts/git/clone-and-zip.sh ';
 
 let envVariables = '';
 
@@ -27,8 +27,8 @@ const todayString = getToday();
 
 envVariables += 'export SOKRATES_ANALYSIS_DATE="' + todayString + '"\n';
 
-const cloneScriptsFolder = '../generated/clone-scripts/';
-const analysisScriptsFolder = '../generated/analysis-scripts/';
+const cloneScriptsFolder = '/app/analysis-scripts/generated/clone-scripts/';
+const analysisScriptsFolder = '/app/analysis-scripts/generated/analysis-scripts/';
 
 if (!fs.existsSync(cloneScriptsFolder)) fs.mkdirSync(cloneScriptsFolder, {recursive: true});
 if (!fs.existsSync(analysisScriptsFolder)) fs.mkdirSync(analysisScriptsFolder, {recursive: true});
@@ -73,7 +73,7 @@ function createAnalysisScripts(org, activeRepos) {
             + repo.pushed_at + "'";
         runAnalysisScript += line + "\n";
         fs.writeFileSync(scriptPath, runAnalysisScript + '\n' +
-            'cd ../../../analysis-artifacts/reports/' + org + '\n' +
+            'cd /app/analysis-artifacts/reports/' + org + '\n' +
             'java -jar $SOKRATES_JAVA_OPTIONS $SOKRATES_JAR_PATH updateLandscape\n');
     });
 
@@ -101,7 +101,7 @@ function createCloneAndZipScripts(org, activeRepos) {
 }
 
 const createScripts = function (org) {
-    const reposFile = '../generated/data/config-repos/' + org + "-active.json";
+    const reposFile = '/app/analysis-scripts/generated/data/config-repos/' + org + "-active.json";
     if (!fs.existsSync(reposFile)) {
         console.log(reposFile + ' does not exist.');
         return;

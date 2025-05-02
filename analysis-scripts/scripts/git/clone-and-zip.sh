@@ -1,6 +1,6 @@
 # check if we have already cloned the repository with the same timestamp
-TIMESTAMP_FILE=../../../analysis-artifacts/archived-repos/$1/$2/timestamps/last_pushed_$3
-REPO_ZIP_FILE=../../../analysis-artifacts/archived-repos/$1/$2/repo.zip
+TIMESTAMP_FILE=/app/analysis-artifacts/archived-repos/$1/$2/timestamps/last_pushed_$3
+REPO_ZIP_FILE=/app/analysis-artifacts/archived-repos/$1/$2/repo.zip
 if [ -f "$REPO_ZIP_FILE" ]; then
   if [ -f "$TIMESTAMP_FILE" ]; then
       echo "$1 / $2 [$3 snapshot] is already cloned."
@@ -8,14 +8,14 @@ if [ -f "$REPO_ZIP_FILE" ]; then
   fi
 fi
 
-mkdir ../../../analysis-artifacts
-mkdir ../../../analysis-artifacts/archived-repos
-mkdir ../../../analysis-artifacts/archived-repos/$1
-rm -rf ../../../analysis-artifacts/archived-repos/$1/$2
-mkdir ../../../analysis-artifacts/archived-repos/$1/$2
-mkdir ../../../analysis-artifacts/archived-repos/$1/$2/timestamps
+mkdir /app/analysis-artifacts
+mkdir /app/analysis-artifacts/archived-repos
+mkdir /app/analysis-artifacts/archived-repos/$1
+rm -rf /app/analysis-artifacts/archived-repos/$1/$2
+mkdir /app/analysis-artifacts/archived-repos/$1/$2
+mkdir /app/analysis-artifacts/archived-repos/$1/$2/timestamps
 
-cd ../../../analysis-artifacts/archived-repos/$1/$2
+cd /app/analysis-artifacts/archived-repos/$1/$2
 
 echo $1 / $2
 
@@ -96,4 +96,4 @@ rm -rf temp_clone_dir
 
 touch timestamps/last_pushed_$3
 
-echo "$(date): $1 / $2" >> ../../clone-log.txt
+echo "$(date): $1 / $2" >> /app/analysis-artifacts/archived-repos/$1/clone-log.txt

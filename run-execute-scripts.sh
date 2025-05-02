@@ -1,5 +1,5 @@
-cd analysis-scripts/generated/clone-scripts
+cd /app/analysis-scripts/generated/clone-scripts
 bash run-all.sh
 
-cd ../analysis-scripts
+cd /app/analysis-scripts/generated/analysis-scripts
 bash run-all.sh
