@@ -8,11 +8,11 @@ if [ -f "$REPO_ZIP_FILE" ]; then
   fi
 fi
 
-mkdir /app/analysis-artifacts
-mkdir /app/analysis-artifacts/archived-repos
-mkdir /app/analysis-artifacts/archived-repos/$1
-mkdir /app/analysis-artifacts/archived-repos/$1/$2
-mkdir /app/analysis-artifacts/archived-repos/$1/$2/timestamps
+mkdir -p /app/analysis-artifacts
+mkdir -p /app/analysis-artifacts/archived-repos
+mkdir -p /app/analysis-artifacts/archived-repos/$1
+mkdir -p /app/analysis-artifacts/archived-repos/$1/$2
+mkdir -p /app/analysis-artifacts/archived-repos/$1/$2/timestamps
 
 cd /app/analysis-artifacts/archived-repos/$1/$2
 

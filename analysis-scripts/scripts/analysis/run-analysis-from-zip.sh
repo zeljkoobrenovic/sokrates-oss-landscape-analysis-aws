@@ -8,17 +8,17 @@ if [ -f "$REPORT_INDEX_FILE" ]; then
   fi
 fi
 
-mkdir /app/analysis-artifacts
-mkdir /app/analysis-artifacts/reports
-mkdir /app/analysis-artifacts/temp
+mkdir -p /app/analysis-artifacts
+mkdir -p /app/analysis-artifacts/reports
+mkdir -p /app/analysis-artifacts/temp
 
-mkdir /app/analysis-artifacts/reports/$1
+mkdir -p /app/analysis-artifacts/reports/$1
 
-mkdir /app/analysis-artifacts/reports/$1/$2
-mkdir /app/analysis-artifacts/reports/$1/$2/timestamps
+mkdir -p /app/analysis-artifacts/reports/$1/$2
+mkdir -p /app/analysis-artifacts/reports/$1/$2/timestamps
 
 # create a temporary analysis folder
-mkdir /app/analysis-artifacts/temp/analysis_$1_$2
+mkdir -p /app/analysis-artifacts/temp/analysis_$1_$2
 
 cp /app/analysis-scripts/scripts/analysis/sokrates_conventions.json /app/analysis-artifacts/temp/analysis_$1_$2
 
