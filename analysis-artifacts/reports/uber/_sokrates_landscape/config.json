@@ -1,0 +1,72 @@
+{
+  "metadata" : {
+    "name" : "Uber Source Code Landscape",
+    "description" : "",
+    "tooltip" : "",
+    "logoLink" : "https://avatars.githubusercontent.com/uber",
+    "links" : [ {
+      "label" : "github.com/uber",
+      "href" : "https://github.com/uber"
+    } ]
+  },
+  "analysisRoot" : ".",
+  "repositoryReportsUrlPrefix" : "../",
+  "parentUrl" : "https://sokrates.dev/",
+  "breadcrumbs" : [ {
+    "label" : "Sokrates Examples",
+    "href" : "https://sokrates.dev/"
+  } ],
+  "extensionThresholdLoc" : 0,
+  "repositoryThresholdLocMain" : 0,
+  "repositoryThresholdContributors" : 2,
+  "contributorThresholdCommits" : 2,
+  "ignoreRepositoriesLastUpdatedBefore" : "",
+  "commitsMaxYears" : 10,
+  "significantContributorMinCommitDaysPerYear" : 10,
+  "anonymizeContributors" : false,
+  "showRepositoryControls" : true,
+  "repositoriesShortListLimit" : 100,
+  "repositoriesListLimit" : 1000,
+  "repositoriesHistoryLimit" : 30,
+  "contributorsListLimit" : 1000,
+  "contributorLinkTemplate" : "",
+  "contributorAvatarLinkTemplate" : "https://avatars.githubusercontent.com/${contributorid}",
+  "ignoreContributors" : [ "svcscm@.*", ".*\\[bot\\].*", ".*[-]infra[@].*", ".*[-]bot[@].*", "no[-]reply.*", ".*[.]robot[@].*", ".*[-]robot[@].*" ],
+  "tagContributors" : [ ],
+  "ignoreExtensions" : [ "txt", "yaml", "yml" ],
+  "includeOnlyOneRepositoryWithSameName" : true,
+  "mergeExtensions" : [ {
+    "primary" : "yaml",
+    "secondary" : "yml"
+  }, {
+    "primary" : "erl",
+    "secondary" : "hrml"
+  }, {
+    "primary" : "erl",
+    "secondary" : "escript"
+  } ],
+  "transformContributorEmails" : [ {
+    "op" : "replace",
+    "params" : [ "[@].*", "" ]
+  }, {
+    "op" : "replace",
+    "params" : [ "[0-9]+[+]", "" ]
+  } ],
+  "showExtensionsOnFirstTab" : true,
+  "showContributorsTrendsOnFirstTab" : true,
+  "maxSublandscapeDepth" : 0,
+  "iFramesAtStart" : [ ],
+  "iFrames" : [ {
+    "title" : "About this Site",
+    "src" : "https://www.sokrates.dev/assets/docs/github-org-analysis.html",
+    "style" : "height: 120px; width: 100%; margin-bottom: 0px; padding: 0;",
+    "scrolling" : false,
+    "moreInfoLink" : ""
+  } ],
+  "iFramesRepositoriesAtStart" : [ ],
+  "iFramesRepositories" : [ ],
+  "iFramesContributorsAtStart" : [ ],
+  "iFramesContributors" : [ ],
+  "customTabs" : [ ],
+  "customHtmlReportHeaderFragment" : ""
+}
