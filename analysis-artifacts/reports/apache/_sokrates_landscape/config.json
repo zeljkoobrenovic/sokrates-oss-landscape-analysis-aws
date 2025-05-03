@@ -1,0 +1,78 @@
+{
+  "metadata" : {
+    "name" : "Apache Software Foundation (ASF)",
+    "description" : "Looking under the hood of the open-source projects of the Apache Software Foundation (ASF). Analyzed by <a href='https://sokrates.dev' target='_blank'>sokrates.dev</a> on Aug 11, 2023.",
+    "tooltip" : "The mission of the Apache Software Foundation (ASF) is to provide software for the public good.",
+    "logoLink" : "logo.png",
+    "links" : [ {
+      "label" : "apache.org",
+      "href" : "https://apache.org/"
+    }, {
+      "label" : "github.com/apache",
+      "href" : "https://github.com/apache"
+    } ]
+  },
+  "analysisRoot" : ".",
+  "repositoryReportsUrlPrefix" : "../",
+  "parentUrl" : "https://sokrates.dev/",
+  "breadcrumbs" : [ {
+    "label" : "Sokrates Examples",
+    "href" : "https://sokrates.dev/"
+  } ],
+  "extensionThresholdLoc" : 0,
+  "repositoryThresholdLocMain" : 0,
+  "repositoryThresholdContributors" : 2,
+  "contributorThresholdCommits" : 2,
+  "ignoreRepositoriesLastUpdatedBefore" : "",
+  "commitsMaxYears" : 20,
+  "significantContributorMinCommitDaysPerYear" : 10,
+  "anonymizeContributors" : false,
+  "showRepositoryControls" : true,
+  "repositoriesShortListLimit" : 100,
+  "repositoriesListLimit" : 1000,
+  "repositoriesHistoryLimit" : 30,
+  "contributorsListLimit" : 1000,
+  "contributorLinkTemplate" : "",
+  "contributorAvatarLinkTemplate" : "https://avatars.githubusercontent.com/${contributorid}",
+  "ignoreContributors" : [ ".*\\[bot\\].*", ".*\\-bot\\@.*" ],
+  "tagContributors" : [ ],
+  "ignoreExtensions" : [ ],
+  "includeOnlyOneRepositoryWithSameName" : true,
+  "mergeExtensions" : [ ],
+  "transformContributorEmails" : [ {
+    "op" : "replace",
+    "params" : [ "[@].*", "" ]
+  }, {
+    "op" : "replace",
+    "params" : [ "[0-9]+[+]", "" ]
+  } ],
+  "showExtensionsOnFirstTab" : true,
+  "showContributorsTrendsOnFirstTab" : true,
+  "maxSublandscapeDepth" : 0,
+  "iFramesAtStart" : [ ],
+  "iFrames" : [ {
+    "title" : "About this Site",
+    "src" : "https://www.sokrates.dev/assets/docs/github-org-analysis.html",
+    "style" : "height: 120px; width: 100%; margin-bottom: 0px; padding: 0;",
+    "scrolling" : false,
+    "moreInfoLink" : ""
+  } ],
+  "iFramesRepositoriesAtStart" : [ ],
+  "iFramesRepositories" : [ ],
+  "iFramesContributorsAtStart" : [ ],
+  "iFramesContributors" : [ {
+    "title" : "Contributions per Email Domain (Past 30 Days)",
+    "src" : "contributions-per-email-domain/contributors-recent.html",
+    "style" : "height: 400px; width: 100%; margin-bottom: 0px; padding: 0;",
+    "scrolling" : true,
+    "moreInfoLink" : ""
+  }, {
+    "title" : "Contributions per Email Domain (All Time)",
+    "src" : "contributions-per-email-domain/contributors.html",
+    "style" : "height: 400px; width: 100%; margin-bottom: 0px; padding: 0;",
+    "scrolling" : true,
+    "moreInfoLink" : ""
+  } ],
+  "customTabs" : [ ],
+  "customHtmlReportHeaderFragment" : ""
+}

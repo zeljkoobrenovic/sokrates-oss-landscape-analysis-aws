@@ -32,7 +32,7 @@
     "maxLines" : 10000,
     "maxLineLength" : 1000,
     "maxTemporalDependenciesDepthDays" : 180,
-    "locDuplicationThreshold" : 10000000,
+    "locDuplicationThreshold" : 200000,
     "minDuplicationBlockLoc" : 6,
     "maxTopListSize" : 50,
     "analyzerOverrides" : [ ],
