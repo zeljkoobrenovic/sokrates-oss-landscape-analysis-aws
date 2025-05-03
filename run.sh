@@ -5,4 +5,4 @@ aws secretsmanager get-secret-value --secret-id gitHubToken --query SecretString
 bash run-generate-scripts.sh
 bash run-execute-scripts.sh
 
-aws s3 cp /app/analysis-artifacts/reports/ $AWS_S3_EXPORT_URI --recursive
+aws s3 cp /app/analysis-artifacts/reports/ s3://sokrates-gallery --recursive
