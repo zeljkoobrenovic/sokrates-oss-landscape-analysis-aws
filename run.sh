@@ -1,6 +1,6 @@
 echo "$SOKRATES_CONFIG" > /app/analysis-scripts/config.json
 
-aws secretsmanager get-secret-value --secret-id gitHubToken --query SecretString --output text --region eu-west-1 > /app/analysis-script/secrets.json
+aws secretsmanager get-secret-value --secret-id gitHubToken --query SecretString --output text --region eu-west-1 > /app/analysis-scripts/secrets.json
 
 bash run-generate-scripts.sh
 bash run-execute-scripts.sh
