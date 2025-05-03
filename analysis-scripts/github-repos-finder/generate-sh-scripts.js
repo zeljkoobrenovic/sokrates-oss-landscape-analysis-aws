@@ -7,7 +7,7 @@ const cloneAndDownloadLinePrefix = 'bash /app/analysis-scripts/scripts/git/clone
 
 let envVariables = '';
 
-envVariables += 'export SOKRATES_JAR_PATH="' + config.sokratesJarFilePath + '"\n';
+envVariables += 'export SOKRATES_JAR_PATH="/app/sokrates-LATEST.jar"\n';
 envVariables += 'export SOKRATES_GITHUB_URL="' + config.githubCloneUrl + '"\n';
 envVariables += 'export SOKRATES_JAVA_OPTIONS="' + config.javaOptions + '"\n';
 

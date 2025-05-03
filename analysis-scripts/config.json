@@ -1,9 +1,7 @@
 {
   "githubCloneUrl": "https://github.com",
   "githubApiUrl": "https://api.github.com",
-  "githubToken": "<GITHUB-TOKEN>",
   "reposUpdatedAfter": "2024-01-01",
-  "sokratesJarFilePath": "/app/sokrates-LATEST.jar",
   "javaOptions": "-Xmx40g",
   "githubOrgs": [
     "openai"

@@ -2,10 +2,11 @@ const https = require('https');
 const fs = require('fs');
 
 const config = JSON.parse(fs.readFileSync('/app/analysis-scripts/config.json'));
+const secrets = JSON.parse(fs.readFileSync('/app/analysis-scripts/secrets.json'));
 
 const gitRepoPrefix = config.githubApiUrl + '/orgs/';
 const startDate = config.reposUpdatedAfter;
-const token = 'token ' + config.githubToken;
+const token = 'token ' + secrets.githubToken;
 
 const headers = {headers: {'user-agent': 'node.js', 'Authorization': token}};
 
