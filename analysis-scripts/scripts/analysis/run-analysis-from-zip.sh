@@ -25,7 +25,7 @@ cp /app/analysis-scripts/scripts/analysis/sokrates_conventions.json /app/analysi
 cd /app/analysis-artifacts/temp/analysis_$1_$2
 
 # checkout the code
-unzip /app/analysis-artifacts/archived-repos/$1/$2/repo.zip
+unzip -q /app/analysis-artifacts/archived-repos/$1/$2/repo.zip
 
 # init analysis (skip if the Sokrates config file is provided in the project)
 if [ ! -f _sokrates/config.json ]

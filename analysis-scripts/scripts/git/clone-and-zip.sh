@@ -87,7 +87,7 @@ find . -type f -name "*.eot" -delete
 find . -type f -name "*.csv" -delete
 find . -type f -name "*.sdf" -delete
 
-zip -r ../repo.zip .
+zip -q -r ../repo.zip .
 
 cd ..
 
