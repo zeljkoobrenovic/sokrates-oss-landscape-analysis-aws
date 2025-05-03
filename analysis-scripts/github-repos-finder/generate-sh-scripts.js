@@ -75,7 +75,7 @@ function createAnalysisScripts(org, activeRepos) {
         fs.writeFileSync(scriptPath, runAnalysisScript + '\n' +
             'cd /app/analysis-artifacts/reports/' + org + '\n' +
             'java -jar $SOKRATES_JAVA_OPTIONS $SOKRATES_JAR_PATH updateLandscape\n\n' +
-            'zip -r /app/analisys-artifacts/reports/' + org + '/all-reports.zip ' + '/app/analisys-artifacts/reports/' + org + '\n'
+            'zip -r /app/analysis-artifacts/reports/' + org + '/all-reports.zip ' + '/app/analysis-artifacts/reports/' + org + '\n'
         );
     });
 
