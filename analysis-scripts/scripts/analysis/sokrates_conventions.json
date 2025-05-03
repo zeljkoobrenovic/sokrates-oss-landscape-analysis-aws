@@ -25,7 +25,7 @@
   },
   "analysis" : {
     "skipDuplication" : false,
-    "skipDependencies" : false,
+    "skipDependencies" : true,
     "cacheSourceFiles" : true,
     "saveCodeFragments" : true,
     "maxFileSizeBytes" : 1000000,
