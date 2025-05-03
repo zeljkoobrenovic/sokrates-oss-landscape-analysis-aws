@@ -3,7 +3,7 @@
     "name": "DeepSeek AI",
     "description": "",
     "tooltip": "",
-    "logoLink": "https://avatars.githubusercontent.com/netflix",
+    "logoLink": "https://avatars.githubusercontent.com/Deepseek-ai",
     "links": [
       {
         "label": "github.com/Deepseek-ai",
@@ -50,14 +50,6 @@
     {
       "primary": "yaml",
       "secondary": "yml"
-    },
-    {
-      "primary": "erl",
-      "secondary": "hrml"
-    },
-    {
-      "primary": "erl",
-      "secondary": "escript"
     }
   ],
   "transformContributorEmails": [
