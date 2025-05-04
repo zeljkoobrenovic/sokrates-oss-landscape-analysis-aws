@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "name": "Amazon Web Service (AWS) Landscape",
+    "name": "Google Cloud Platform OSS Landscape",
     "description": "",
     "tooltip": "",
-    "logoLink": "https://avatars.githubusercontent.com/aws",
+    "logoLink": "https://avatars.githubusercontent.com/GoogleCloudPlatform",
     "links": [
       {
-        "label": "github.com/aws",
-        "href": "https://github.com/aws"
+        "label": "github.com/GoogleCloudPlatform",
+        "href": "https://github.com/GoogleCloudPlatform"
       }
     ]
   },

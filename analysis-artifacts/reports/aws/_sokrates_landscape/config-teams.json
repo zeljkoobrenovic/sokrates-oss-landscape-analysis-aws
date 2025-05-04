@@ -1,10 +1,10 @@
 {
   "teams": [
     {
-      "name": "Google",
+      "name": "Amazon",
       "description": "",
       "emailPatterns": [
-        ".*[@]google[.]com"
+        ".*[@]amazon[.]com"
       ]
     }
   ]
