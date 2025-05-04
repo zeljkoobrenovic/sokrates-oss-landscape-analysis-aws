@@ -8,40 +8,11 @@ This project provides a template you can use to analyze, with [Sokrates](https:/
 
 ### Running
 
-<pre style="white-space: normal">docker run -v $(pwd)/config.json:/app/analysis-scripts/config.json -e AWS_ACCESS_KEY_ID=<ID> -e AWS_SECRET_ACCESS_KEY=<SECRET_KEY> -e AWS_S3_EXPORT_URI=<S3_URI> sokrates-landscape</pre>
+<pre style="white-space: normal">docker run -e AWS_ACCESS_KEY_ID=<ID> -e AWS_SECRET_ACCESS_KEY=<SECRET_KEY> -e SOKRATES_CONFIG=<JSON string of config.json file> sokrates-landscape</pre>
 
 ### The Concept
 
 The project analyzes all repositories in given GitHub organizations. For each repository, it creates a detailed project report. It puts all reports in a folder, where you can run `sokrates updateLandscape` command to create a landscape overview of the whole organization (volume, project trends, team topologies...).
-
-### Pre-requirements
-
-- Latest version of [Sokrates](https://sokrates.dev) CLI<pre>curl https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar --output sokrates-LATEST.jar</pre>
-- Java to run [Sokrates](https://sokrates.dev) CLI
-- unzip
-- [Graphviz](https://graphviz.org/) (optional, but highly recommended as it significantly improves the performance of Sokrates graph rendering)
-- Recent version of Node.js to run GitHub API and code generation scripts
-- An environment (e.g., Linux, MacOS...) that can run BASH (.sh) scripts
-- Enough space on disk to store zipped version of all repos and generated Sokrates reports (several GBs at least)
-
-### Install & Run
-
-- Clone this repo, and go to the cloned folder
-  <pre>git clone https://github.com/zeljkoobrenovic/sokrates-oss-landscape-analysis.git
-  cd sokrates-oss-landscape-analysis</pre>
-
-- Open and edit the **analysis-scripts/config.json** file: 
-  - add you **GitHub access token**
-  - add the full **path to the downloaded Sokrates CLI JAR file**
-  - add the **list of GitHub organizations** you want to analyze (you can analyze multiple organizations)
-  - eventually change GitHub instance and API URLs (by default, configuration points to github.com, but you can use this project with your organizational GitHub instances as well).
-- From the root of this cloned repository, run: <pre>bash run.sh</pre>
-- Depending on the size of the organization, the analysis may take minutes or several hours
-- The analysis will create the **analysis-artifacts** folder with the following sub-folders:
-  - **archived-repos**, where zipped sources code used as an input for analyses is stored
-  - **reports**, with sub-folders per organization
-  - **pull-requests**, with data and static HTML reports files for each organization
-- Generated reports and downloaded repos are **timestamped** (folders of reports and archived repos contain the timestamps subfolder). If you **re-run the analysis**, then only **repositories that have changed** (based on the timestamp file) are cloned and analyzed. If you want to re-run the analysis for all repositories, just delete the **analysis-artifacts** folder.  
 
 ### How the Analysis Works?
 
@@ -72,8 +43,5 @@ The analysis works in several steps:
     - **run sokrates analysis** (**sokrates init** and **sokrates generateReports** commands) 
     - **copies the analysis results** in the **analysis-artifacts/reports/** folders
     - remove the temporary folders
-- ***Step 5: Running the pull-requests download scripts***
-    - Running the **analysis-scripts/generated/pull-requests-scripts**/ bash scripts that:
-      - downloads and stores in JSON files the pull request metadata for all repositories
-      - generates static HTML pull request reports for each organization
-
+- ***Step 5: copying the reports to an S3 folder***
+    - **copies the analysis results** in an S3 folder (s3://sokrate-gallery)
