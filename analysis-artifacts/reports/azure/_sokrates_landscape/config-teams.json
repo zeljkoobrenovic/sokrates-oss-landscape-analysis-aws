@@ -1,0 +1,11 @@
+{
+  "teams": [
+    {
+      "name": "Microsoft",
+      "description": "",
+      "emailPatterns": [
+        ".*[@]microsoft[.]com"
+      ]
+    }
+  ]
+}
