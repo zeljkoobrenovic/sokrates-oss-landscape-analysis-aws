@@ -1,0 +1,11 @@
+{
+  "teams": [
+    {
+      "name": "Open AI",
+      "description": "",
+      "emailPatterns": [
+        ".*[@]openai[.]com"
+      ]
+    }
+  ]
+}
