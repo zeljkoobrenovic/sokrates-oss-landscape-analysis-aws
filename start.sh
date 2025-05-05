@@ -7,6 +7,9 @@ mv sokrates-oss-landscape-analysis-aws/* .
 curl https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar --output sokrates-LATEST.jar
 
 echo "executing $COMMAND"
+
+echo "landscape LANDSCAPE_NAME"
+
 #
 #if [ -n "$COMMAND" ]; then
 #  if [[ "$COMMAND" != "analyze-github-orgs" && "$COMMAND" != "analyze-git-repo" && "$COMMAND" != "update-landscape" ]]; then
