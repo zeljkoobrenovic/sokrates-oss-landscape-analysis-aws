@@ -6,7 +6,7 @@ if [ -n "$COMMAND" ]; then
   fi
 
   # Run the command
-  bash run.sh "$COMMAND"
+  bash "cmd-$COMMAND"
 
   exit 1
 fi
