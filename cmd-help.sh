@@ -1,0 +1,7 @@
+echo "help # this command"
+echo ""
+echo "analyze-github-orgs -v SOKRATES_CONFIG=<json-config>"
+echo ""
+echo "analyze-git-repo -v REPO_URL=<git-repo-url> S3_EXPORT_URI=<s3://bucket-name/folder>"
+echo ""
+echo "update-landscape -v LANDSCAPE_NAME=<name>"
