@@ -1,8 +1,7 @@
-aws cp s3://sokrates-gallery/$LANDSCAPE_NAME/all-reports.zip .
-
 mkdir temp
 cd temp
 
+aws s3 cp s3://sokrates-gallery/$LANDSCAPE_NAME/all-reports.zip .
 unzip all-reports.zip
 
 cp -rf /app/analysis-artifacts/reports/$LANDSCAPE_NAME/* /app/temp/app/analysis-artifacts/reports/$LANDSCAPE_NAME
