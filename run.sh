@@ -1,8 +1,12 @@
-echo "$SOKRATES_CONFIG" > /app/analysis-scripts/config.json
+if [ -n "$COMMAND" ]; then
+  # Check if the command is valid
+  if [[ "$COMMAND" != "analyze-github-orgs" && "$COMMAND" != "analyze-git-repo" && "$COMMAND" != "update-landscape" ]]; then
+    echo "Invalid command: $COMMAND"
+    exit 1
+  fi
 
-aws secretsmanager get-secret-value --secret-id gitHubToken --query SecretString --output text --region eu-west-1 > /app/analysis-scripts/secrets.json
+  # Run the command
+  bash run.sh "$COMMAND"
 
-bash run-generate-scripts.sh
-bash run-execute-scripts.sh
-
-aws s3 cp /app/analysis-artifacts/reports/ s3://sokrates-gallery --recursive
+  exit 1
+fi
