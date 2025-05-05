@@ -6,6 +6,8 @@ mv sokrates-oss-landscape-analysis-aws/* .
 # Download the Sokrates CLI JAR
 curl https://d2bb1mtyn3kglb.cloudfront.net/builds/sokrates-LATEST.jar --output sokrates-LATEST.jar
 
+echo "executing $COMMAND"
+
 if [ -n "$COMMAND" ]; then
   if [[ "$COMMAND" != "analyze-github-orgs" && "$COMMAND" != "analyze-git-repo" && "$COMMAND" != "update-landscape" ]]; then
     echo "Invalid command: $COMMAND"
