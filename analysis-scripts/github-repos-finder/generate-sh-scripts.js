@@ -110,6 +110,11 @@ const payloadsWrapper = {
     finalPayloads: []
 }
 
+const payloadsIdsWrapper = {
+    payloads: [],
+    finalPayloads: []
+}
+
 function createPayloadsJson(org, activeRepos) {
     activeRepos.forEach(repo => {
         let description = repo.description ? repo.description : " ";
@@ -126,13 +131,16 @@ function createPayloadsJson(org, activeRepos) {
             "REPO_DESCRIPTION": description
         };
         payloadsWrapper.payloads.push(payload);
+        payloadsIdsWrapper.payloads.push(id);
         fs.writeFileSync(payloadsFolder + '/cache/' + org + '-' + repo.name, JSON.stringify(payload, null, 2));
     });
     payloadsWrapper.finalPayloads.push({
         "COMMAND": "init-landscape",
         "S3_FOLDER_URI": "s3://sokrates-gallery/" + org,
     });
+    payloadsIdsWrapper.payloads.push(org);
     fs.writeFileSync(payloadsFolder + '/payloads.json', JSON.stringify(payloadsWrapper, null, 2));
+    fs.writeFileSync(payloadsFolder + '/payloadIds.json', JSON.stringify(payloadsWrapper, null, 2));
 }
 
 const createScripts = function (org) {
