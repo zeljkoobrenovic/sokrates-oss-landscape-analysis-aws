@@ -11,6 +11,8 @@ envVariables += 'export SOKRATES_JAR_PATH="/app/sokrates-LATEST.jar"\n';
 envVariables += 'export SOKRATES_GITHUB_URL="' + config.githubCloneUrl + '"\n';
 envVariables += 'export SOKRATES_JAVA_OPTIONS="' + config.javaOptions + '"\n';
 
+const payloads = [];
+
 function getToday() {
     const today = new Date();
     const yyyy = today.getFullYear();
@@ -29,6 +31,7 @@ envVariables += 'export SOKRATES_ANALYSIS_DATE="' + todayString + '"\n';
 
 const cloneScriptsFolder = '/app/analysis-scripts/generated/clone-scripts/';
 const analysisScriptsFolder = '/app/analysis-scripts/generated/analysis-scripts/';
+const payloadsFolder = '/app/analysis-scripts/generated/';
 
 if (!fs.existsSync(cloneScriptsFolder)) fs.mkdirSync(cloneScriptsFolder, {recursive: true});
 if (!fs.existsSync(analysisScriptsFolder)) fs.mkdirSync(analysisScriptsFolder, {recursive: true});
@@ -102,6 +105,26 @@ function createCloneAndZipScripts(org, activeRepos) {
     fs.writeFileSync(cloneScriptsFolder + 'run-all-parallel.sh', cloneAllScriptParallel);
 }
 
+function createPayloadsJson(org, activeRepos) {
+    const payload = [];
+    let description = repo.description ? repo.description : " ";
+    description = description.replace(/\)/g, "&rpar;");
+    description = description.replace(/\(/g, "&lpar;");
+    description = description.replace(/\'/g, "&apos;");
+
+    activeRepos.forEach(repo => {
+        payloads.push({
+            "COMMAND": "analyze-git-repo",
+            "GIT_REPO_URL": repo.clone_url,
+            "S3_FOLDER_URI": "s3://sokrates-gallery/" + org,
+            "REPO_NAME": org + ' / ' + repo.name,
+            "REPO_LOGO": "https://avatars.githubusercontent.com/" + repo.name,
+            "REPO_DESCRIPTION": description
+        });
+    });
+    fs.writeFileSync(payloadsFolder + '/payloads.json', JSON.stringify({payloads}, null, 2));
+}
+
 const createScripts = function (org) {
     const reposFile = '/app/analysis-scripts/generated/data/config-repos/' + org + "-active.json";
     if (!fs.existsSync(reposFile)) {
@@ -113,6 +136,7 @@ const createScripts = function (org) {
 
     createCloneAndZipScripts(org, activeRepos);
     createAnalysisScripts(org, activeRepos);
+    createPayloadsJson(org, activeRepos);
 }
 
 const orgs = config.githubOrgs;
