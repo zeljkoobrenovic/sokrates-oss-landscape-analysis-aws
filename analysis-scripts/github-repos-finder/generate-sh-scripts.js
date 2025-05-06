@@ -107,7 +107,7 @@ function createCloneAndZipScripts(org, activeRepos) {
 
 const payloadsWrapper = {
     payloads: [],
-    final_payloads: []
+    finalPayloads: []
 }
 
 function createPayloadsJson(org, activeRepos) {
@@ -125,7 +125,7 @@ function createPayloadsJson(org, activeRepos) {
             "REPO_DESCRIPTION": description
         });
     });
-    payloadsWrapper.final_payloads.push({
+    payloadsWrapper.finalPayloads.push({
         "COMMAND": "init-landscape",
         "S3_FOLDER_URI": "s3://sokrates-gallery/" + org,
     });
