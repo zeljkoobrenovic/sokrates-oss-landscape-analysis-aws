@@ -105,24 +105,31 @@ function createCloneAndZipScripts(org, activeRepos) {
     fs.writeFileSync(cloneScriptsFolder + 'run-all-parallel.sh', cloneAllScriptParallel);
 }
 
-function createPayloadsJson(org, activeRepos) {
-    const payload = [];
+const payloadsWrapper = {
+    payloads: [],
+    final_payloads: []
+}
 
+function createPayloadsJson(org, activeRepos) {
     activeRepos.forEach(repo => {
         let description = repo.description ? repo.description : " ";
         description = description.replace(/\)/g, "&rpar;");
         description = description.replace(/\(/g, "&lpar;");
         description = description.replace(/\'/g, "&apos;");
-        payloads.push({
+        payloadsWrapper.payloads.push({
             "COMMAND": "analyze-git-repo",
             "GIT_REPO_URL": repo.clone_url,
-            "S3_FOLDER_URI": "s3://sokrates-gallery/" + org,
+            "S3_FOLDER_URI": "s3://sokrates-gallery/" + org + '/' + repo.name,
             "REPO_NAME": org + ' / ' + repo.name,
             "REPO_LOGO": "https://avatars.githubusercontent.com/" + repo.name,
             "REPO_DESCRIPTION": description
         });
     });
-    fs.writeFileSync(payloadsFolder + '/payloads.json', JSON.stringify({payloads}, null, 2));
+    payloadsWrapper.final_payloads.push({
+        "COMMAND": "init-landscape",
+        "S3_FOLDER_URI": "s3://sokrates-gallery/" + org,
+    });
+    fs.writeFileSync(payloadsFolder + '/payloads.json', JSON.stringify(payloadsWrapper, null, 2));
 }
 
 const createScripts = function (org) {
