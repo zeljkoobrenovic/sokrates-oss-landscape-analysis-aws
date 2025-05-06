@@ -1,0 +1,127 @@
+{
+  "Comment": "Process multiple ECS tasks sequentially",
+  "StartAt": "ProcessPayloads",
+  "States": {
+    "ProcessPayloads": {
+      "Type": "Map",
+      "MaxConcurrency": 20,
+      "ItemsPath": "$.payloads",
+      "Iterator": {
+        "StartAt": "RunECSTask",
+        "States": {
+          "RunECSTask": {
+            "Type": "Task",
+            "Resource": "arn:aws:states:::ecs:runTask.sync",
+            "Parameters": {
+              "Cluster": "SokratesLandscapeCluster",
+              "TaskDefinition": "Sokrates:30",
+              "LaunchType": "FARGATE",
+              "NetworkConfiguration": {
+                "AwsvpcConfiguration": {
+                  "Subnets": [
+                    "subnet-XXXX",
+                    "subnet-XXXX",
+                    "subnet-XXXX"
+                  ],
+                  "SecurityGroups": [
+                    "sg-XXXX",
+                    "sg-XXXX"
+                  ],
+                  "AssignPublicIp": "ENABLED"
+                }
+              },
+              "Overrides": {
+                "ContainerOverrides": [
+                  {
+                    "Name": "sokrates-landscape",
+                    "Environment": [
+                      {
+                        "Name": "COMMAND",
+                        "Value.$": "$.COMMAND"
+                      },
+                      {
+                        "Name": "GIT_REPO_URL",
+                        "Value.$": "$.GIT_REPO_URL"
+                      },
+                      {
+                        "Name": "S3_FOLDER_URI",
+                        "Value.$": "$.S3_FOLDER_URI"
+                      },
+                      {
+                        "Name": "REPO_NAME",
+                        "Value.$": "$.REPO_NAME"
+                      },
+                      {
+                        "Name": "REPO_LOGO",
+                        "Value.$": "$.REPO_LOGO"
+                      },
+                      {
+                        "Name": "REPO_DESCRIPTION",
+                        "Value.$": "$.REPO_DESCRIPTION"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "End": true
+          }
+        }
+      },
+      "Next": "RunFinalTask"
+    },
+    "RunFinalTask": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::ecs:runTask.sync",
+            "Parameters": {
+              "Cluster": "SokratesLandscapeCluster",
+              "TaskDefinition": "Sokrates:30",
+              "LaunchType": "FARGATE",
+              "NetworkConfiguration": {
+                "AwsvpcConfiguration": {
+                  "Subnets": [
+                    "subnet-XXXX",
+                    "subnet-XXXX",
+                    "subnet-XXXX"
+                  ],
+                  "SecurityGroups": [
+                    "sg-XXXX",
+                    "sg-XXXX"
+                  ],
+                  "AssignPublicIp": "ENABLED"
+                }
+              },
+              "Overrides": {
+                "ContainerOverrides": [
+                  {
+                    "Name": "sokrates-landscape",
+                    "Environment": [
+                      {
+                        "Name": "COMMAND",
+                        "Value": "init-landscape"
+                      },
+                      {
+                        "Name": "S3_FOLDER_URI",
+                        "Value.$": "$.S3_FOLDER_URI"
+                      },
+                      {
+                        "Name": "LANDSCAPE_NAME",
+                        "Value.$": "$.LANDSCAPE_NAME"
+                      },
+                      {
+                        "Name": "LANDSCAPE_LOGO",
+                        "Value.$": "$.LANDSCAPE_LOGO"
+                      },
+                      {
+                        "Name": "LANDSCAPE_DESCRIPTION",
+                        "Value.$": "$.LANDSCAPE_DESCRIPTION"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+      "End": true
+    }
+  }
+}
