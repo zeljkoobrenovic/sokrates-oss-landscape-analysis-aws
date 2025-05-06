@@ -107,12 +107,12 @@ function createCloneAndZipScripts(org, activeRepos) {
 
 function createPayloadsJson(org, activeRepos) {
     const payload = [];
-    let description = repo.description ? repo.description : " ";
-    description = description.replace(/\)/g, "&rpar;");
-    description = description.replace(/\(/g, "&lpar;");
-    description = description.replace(/\'/g, "&apos;");
 
     activeRepos.forEach(repo => {
+        let description = repo.description ? repo.description : " ";
+        description = description.replace(/\)/g, "&rpar;");
+        description = description.replace(/\(/g, "&lpar;");
+        description = description.replace(/\'/g, "&apos;");
         payloads.push({
             "COMMAND": "analyze-git-repo",
             "GIT_REPO_URL": repo.clone_url,
