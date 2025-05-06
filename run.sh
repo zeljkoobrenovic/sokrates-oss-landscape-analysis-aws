@@ -1,6 +1,6 @@
 if [ -n "$COMMAND" ]; then
   # Check if the command is valid
-  if [[ "$COMMAND" != "analyze-github-orgs" && "$COMMAND" != "analyze-git-repo" && "$COMMAND" != "update-landscape" ]]; then
+  if [[ "$COMMAND" != "analyze-github-orgs" && "$COMMAND" != "analyze-git-repo" && "$COMMAND" != "init-landscape"  && "$COMMAND" != "update-landscape" ]]; then
     echo "Invalid command: $COMMAND"
     bash "cmd-help.sh"
     exit 1
