@@ -31,7 +31,7 @@ envVariables += 'export SOKRATES_ANALYSIS_DATE="' + todayString + '"\n';
 
 const cloneScriptsFolder = '/app/analysis-scripts/generated/clone-scripts/';
 const analysisScriptsFolder = '/app/analysis-scripts/generated/analysis-scripts/';
-const payloadsFolder = '/app/analysis-scripts/generated/';
+const payloadsFolder = '/app/analysis-scripts/generated/payloads/';
 
 if (!fs.existsSync(cloneScriptsFolder)) fs.mkdirSync(cloneScriptsFolder, {recursive: true});
 if (!fs.existsSync(analysisScriptsFolder)) fs.mkdirSync(analysisScriptsFolder, {recursive: true});
@@ -116,14 +116,17 @@ function createPayloadsJson(org, activeRepos) {
         description = description.replace(/\)/g, "&rpar;");
         description = description.replace(/\(/g, "&lpar;");
         description = description.replace(/\'/g, "&apos;");
-        payloadsWrapper.payloads.push({
+        let id = org + ' / ' + repo.name;
+        const payload = {
             "COMMAND": "analyze-git-repo",
             "GIT_REPO_URL": repo.clone_url,
             "S3_FOLDER_URI": "s3://sokrates-gallery/" + org + '/' + repo.name,
-            "REPO_NAME": org + ' / ' + repo.name,
+            "REPO_NAME": id,
             "REPO_LOGO": "https://avatars.githubusercontent.com/" + repo.name,
             "REPO_DESCRIPTION": description
-        });
+        };
+        payloadsWrapper.payloads.push(payload);
+        fs.writeFileSync(payloadsFolder + '/cache/' + org + '-' + repo.name, JSON.stringify(payload, null, 2));
     });
     payloadsWrapper.finalPayloads.push({
         "COMMAND": "init-landscape",
