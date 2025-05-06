@@ -1,0 +1,51 @@
+{
+  "Comment": "Process multiple ECS tasks sequentially",
+  "StartAt": "ProcessPayloads",
+  "States": {
+    "ProcessPayloads": {
+      "Type": "Map",
+      "MaxConcurrency": 20,
+      "ItemsPath": "$.payloads",
+      "Iterator": {
+        "StartAt": "RunECSTask",
+        "States": {
+          "RunECSTask": {
+            "Type": "Task",
+            "Resource": "arn:aws:states:::ecs:runTask.sync",
+            "Parameters": {
+              "Cluster": "your-cluster-name",
+              "TaskDefinition": "Sokrates:30",
+              "LaunchType": "FARGATE",
+              "NetworkConfiguration": {
+                "AwsvpcConfiguration": {
+                  "Subnets": ["subnet-xxxxxx", "subnet-yyyyyy"],
+                  "SecurityGroups": ["sg-xxxxxx"],
+                  "AssignPublicIp": "ENABLED"
+                }
+              },
+              "Overrides": {
+                "ContainerOverrides": [
+                  {
+                    "Name": "your-container-name",
+                    "Environment": [
+                      {
+                        "Name": "PARAM1",
+                        "Value.$": "$.param1"
+                      },
+                      {
+                        "Name": "PARAM2",
+                        "Value.$": "$.param2"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "End": true
+          }
+        }
+      },
+      "End": true
+    }
+  }
+}

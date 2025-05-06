@@ -9,5 +9,7 @@ if [ -n "$COMMAND" ]; then
   # Run the command
   bash "cmd-$COMMAND.sh"
 
-  exit 1
+  exit 0
 fi
+
+exit 1

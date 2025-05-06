@@ -1,0 +1,20 @@
+{
+  "payloads": [
+    {
+      "COMMAND": "analyze-git-repo",
+      "GIT_REPO_URL": "https://github.com/zeljkoobrenovic/booch-computing-history.git",
+      "S3_FOLDER_URI": "s3://sokrates-gallery/temp/booch-computing-history",
+      "REPO_NAME": "obren.io / booch-computing-history",
+      "REPO_LOGO": "https://www.sokrates.dev/assets/logo.png",
+      "REPO_DESCRIPTION": "A polyglot source code analyzer."
+    },
+    {
+      "COMMAND": "analyze-git-repo",
+      "GIT_REPO_URL": "https://github.com/zeljkoobrenovic/grounded-architecture-dashboard-examples.git",
+      "S3_FOLDER_URI": "s3://sokrates-gallery/temp/grounded-architecture-dashboard-examples",
+      "REPO_NAME": "obren.io / booch-computing-history",
+      "REPO_LOGO": "https://www.sokrates.dev/assets/logo.png",
+      "REPO_DESCRIPTION": "A polyglot source code analyzer."
+    }
+  ]
+}

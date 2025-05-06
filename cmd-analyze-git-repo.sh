@@ -1,3 +1,11 @@
+# Description: This script analyzes a GitHub repository using Sokrates and uploads the reports to an S3 bucket.
+# Parameters via environment variables:
+# - $GIT_REPO_URL: The URL of the GitHub repository to analyze.
+# - $S3_FOLDER_URI: The S3 URI where the reports will be uploaded.
+# - $REPO_NAME: The name of the repository.
+# - $REPO_DESCRIPTION: The description of the repository.
+# - $REPO_LOGO: The URL of the logo for the repository.
+
 mkdir temp
 
 git clone $GIT_REPO_URL temp
