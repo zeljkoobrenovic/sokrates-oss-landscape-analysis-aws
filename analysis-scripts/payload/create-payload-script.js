@@ -14,4 +14,4 @@ script += 'export REPO_DESCRIPTION="' + payload.REPO_DESCRIPTION + '"\n\n';
 
 script += 'bash cmd-analyze-git-repo.sh\n';
 
-fs.writeFileSync('/app/temp-run-payload-analysis.sh', JSON.stringify(payloadsIdsWrapper, null, 2));
+fs.writeFileSync('/app/temp-run-payload-analysis.sh', script);
