@@ -1,6 +1,6 @@
 
-if [[ -z "${S3_PAYLOAD_UR}" ]]; then
-  echo "PAYLOAD_ID not defined"
+if [[ -z "${S3_PAYLOAD_URI}" ]]; then
+  echo "S3_PAYLOAD_URI not defined"
   exit 1
 fi
 
