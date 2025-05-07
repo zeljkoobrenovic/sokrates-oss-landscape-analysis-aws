@@ -3,6 +3,7 @@ cd temp
 
 echo "aws s3 cp $S3_FOLDER_URI ."
 aws s3 cp $S3_FOLDER_URI . --recursive
+rm all-reports.zip
 
 echo "zip -q -r all-reports.zip ."
 zip -q -r all-reports.zip .
