@@ -131,7 +131,7 @@ function createPayloadsJson(org, activeRepos) {
             "REPO_DESCRIPTION": description
         };
         payloadsWrapper.payloads.push(payload);
-        payloadsIdsWrapper.payloads.push(id);
+        payloadsIdsWrapper.payloads.push(org + '/' + repo.name);
         fs.mkdirSync(payloadsFolder + '/cache/' + org, {recursive: true});
         fs.writeFileSync(payloadsFolder + '/cache/' + org + '/' + repo.name, JSON.stringify(payload, null, 2));
     });
@@ -139,7 +139,7 @@ function createPayloadsJson(org, activeRepos) {
         "COMMAND": "init-landscape",
         "S3_FOLDER_URI": "s3://sokrates-gallery/" + org,
     });
-    payloadsIdsWrapper.payloads.push(org);
+    payloadsIdsWrapper.finalPayloads.push(org);
     fs.writeFileSync(payloadsFolder + '/payloads.json', JSON.stringify(payloadsWrapper, null, 2));
     fs.writeFileSync(payloadsFolder + '/payload_ids.json', JSON.stringify(payloadsIdsWrapper, null, 2));
 }
