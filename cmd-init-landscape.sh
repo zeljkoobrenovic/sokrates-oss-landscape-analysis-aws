@@ -2,7 +2,7 @@ mkdir temp
 cd temp
 
 echo "aws s3 cp $S3_FOLDER_URI ."
-aws s3 cp $S3_FOLDER_URI . --recursive
+aws s3 cp $S3_FOLDER_URI . --recursive --only-show-errors
 rm all-reports.zip
 
 echo "zip -q -r all-reports.zip ."
@@ -26,4 +26,4 @@ echo "-jar -Xmx40g /app/sokrates-LATEST.jar updateLandscape"
 java -jar -Xmx40g /app/sokrates-LATEST.jar updateLandscape
 
 echo "aws s3 cp _sokrates_landscape/ $S3_FOLDER_URI/_sokrates_landscape/ --recursive"
-aws s3 cp _sokrates_landscape/ $S3_FOLDER_URI/_sokrates_landscape/ --recursive
+aws s3 cp _sokrates_landscape/ $S3_FOLDER_URI/_sokrates_landscape/ --recursive --only-show-errors

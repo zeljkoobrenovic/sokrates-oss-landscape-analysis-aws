@@ -8,4 +8,4 @@ bash run-generate-scripts.sh
 
 aws s3 cp /app/analysis-scripts/generated/payloads.json s3://sokrates-gallery/_payloads/payloads.json
 
-aws s3 cp /app/analysis-scripts/generated/payloads s3://sokrates-galerry/_payloads/ --recursive
+aws s3 cp /app/analysis-scripts/generated/payloads s3://sokrates-gallery/_payloads/ --recursive
