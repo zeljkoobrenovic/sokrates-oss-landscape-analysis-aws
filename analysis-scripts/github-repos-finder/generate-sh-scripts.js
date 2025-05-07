@@ -132,7 +132,8 @@ function createPayloadsJson(org, activeRepos) {
         };
         payloadsWrapper.payloads.push(payload);
         payloadsIdsWrapper.payloads.push(id);
-        fs.writeFileSync(payloadsFolder + '/cache/' + org + '-' + repo.name, JSON.stringify(payload, null, 2));
+        fs.mkdirSync(payloadsFolder + '/cache/' + org, {recursive: true});
+        fs.writeFileSync(payloadsFolder + '/cache/' + org + '/' + repo.name, JSON.stringify(payload, null, 2));
     });
     payloadsWrapper.finalPayloads.push({
         "COMMAND": "init-landscape",
