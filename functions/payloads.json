@@ -16,5 +16,8 @@
       "REPO_LOGO": "https://www.sokrates.dev/assets/logo.png",
       "REPO_DESCRIPTION": "A polyglot source code analyzer."
     }
+  ],
+  "finalPayloads" : [
+
   ]
 }

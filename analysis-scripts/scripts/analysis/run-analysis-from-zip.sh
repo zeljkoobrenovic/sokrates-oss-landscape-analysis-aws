@@ -34,7 +34,7 @@ then
 fi
 
 # run analysis
-java -jar $SOKRATES_JAVA_OPTIONS $SOKRATES_JAR_PATH generateReports -timeout 9999
+java -jar $SOKRATES_JAVA_OPTIONS $SOKRATES_JAR_PATH generateReports -timeout 86400
 
 # Done analysis, now copy data
 
