@@ -140,7 +140,7 @@ function createPayloadsJson(org, activeRepos) {
     });
     payloadsIdsWrapper.payloads.push(org);
     fs.writeFileSync(payloadsFolder + '/payloads.json', JSON.stringify(payloadsWrapper, null, 2));
-    fs.writeFileSync(payloadsFolder + '/payloadIds.json', JSON.stringify(payloadsWrapper, null, 2));
+    fs.writeFileSync(payloadsFolder + '/payload_ids.json', JSON.stringify(payloadsIdsWrapper, null, 2));
 }
 
 const createScripts = function (org) {
