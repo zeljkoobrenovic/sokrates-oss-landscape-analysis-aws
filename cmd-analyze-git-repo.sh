@@ -23,4 +23,4 @@ echo "java -jar -Xmx40g /app/sokrates-LATEST.jar generateReports"
 java -jar -Xmx40g /app/sokrates-LATEST.jar generateReports -timeout 86400
 
 echo "aws s3 cp _sokrates/reports $S3_FOLDER_URI --recursive"
-aws s3 cp _sokrates/reports $S3_FOLDER_URI --recursive
+aws s3 cp /app/temp/_sokrates/reports $S3_FOLDER_URI --recursive
