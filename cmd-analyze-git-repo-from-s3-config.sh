@@ -6,10 +6,8 @@ fi
 
 aws s3 cp $S3_PAYLOAD_URI payload.json
 
-cd /app/analysis-scripts/payload/
-node create-payload-script
+node /app/analysis-scripts/payload/create-payload-script.js
 
-cd /app
 bash temp-run-payload-analysis.sh
 
 exit 0
