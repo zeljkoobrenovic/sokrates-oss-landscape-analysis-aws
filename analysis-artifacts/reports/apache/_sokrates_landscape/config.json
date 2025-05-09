@@ -3,7 +3,7 @@
     "name" : "Apache Software Foundation (ASF)",
     "description" : "Looking under the hood of the open-source projects of the Apache Software Foundation (ASF). Analyzed by <a href='https://sokrates.dev' target='_blank'>sokrates.dev</a> on Aug 11, 2023.",
     "tooltip" : "The mission of the Apache Software Foundation (ASF) is to provide software for the public good.",
-    "logoLink" : "logo.png",
+    "logoLink" : "https://avatars.githubusercontent.com/apache",
     "links" : [ {
       "label" : "apache.org",
       "href" : "https://apache.org/"
