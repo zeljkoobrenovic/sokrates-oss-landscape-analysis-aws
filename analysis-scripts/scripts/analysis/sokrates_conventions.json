@@ -25,6 +25,7 @@
   },
   "analysis" : {
     "skipDuplication" : false,
+    "skipCorrelations" : true,
     "skipDependencies" : true,
     "cacheSourceFiles" : true,
     "saveCodeFragments" : true,
