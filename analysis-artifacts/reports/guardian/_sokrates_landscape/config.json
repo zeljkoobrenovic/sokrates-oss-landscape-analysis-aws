@@ -36,11 +36,6 @@
   "contributorLinkTemplate": "",
   "contributorAvatarLinkTemplate": "https://avatars.githubusercontent.com/${contributorid}",
   "ignoreContributors": [
-    "svcscm@.*",
-    ".*\\[bot\\].*",
-    ".*[-]infra[@].*",
-    ".*[-]bot[@].*",
-    "github.*"
   ],
   "ignoreExtensions": [
     "txt",
@@ -87,10 +82,17 @@
     {
       "op": "replace",
       "params": [
-        "(\\-?\\.)",
+        "(\\-|\\.)",
         " "
       ]
     }
+  ],
+  "bots": [
+    "svcscm@.*",
+    ".*\\[bot\\].*",
+    ".*[-]infra[@].*",
+    ".*[-]bot[@].*",
+    "github.*"
   ],
   "showExtensionsOnFirstTab": true,
   "showContributorsTrendsOnFirstTab": true,
