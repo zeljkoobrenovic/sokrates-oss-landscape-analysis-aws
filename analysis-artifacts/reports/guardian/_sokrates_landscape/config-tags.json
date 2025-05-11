@@ -399,6 +399,71 @@
         ],
         "excludePathPatterns": [],
         "imageLink": "https://zeljkoobrenovic.github.io/sokrates-media/aws/AWS-Cloud-Development-Kit.png"
+      },
+      {
+        "tag": "aws s3",
+        "patterns": [],
+        "excludePatterns": [],
+        "mainExtensions": [],
+        "anyExtensions": [],
+        "excludeExtensions": [],
+        "pathPatterns": [
+          ".*s3.*"
+        ],
+        "excludePathPatterns": [],
+        "imageLink": "https://zeljkoobrenovic.github.io/sokrates-media/aws/Amazon-Simple-Storage-Service.png"
+      },
+      {
+        "tag": "aws sqs",
+        "patterns": [],
+        "excludePatterns": [],
+        "mainExtensions": [],
+        "anyExtensions": [],
+        "excludeExtensions": [],
+        "pathPatterns": [
+          ".*sqs.*"
+        ],
+        "excludePathPatterns": [],
+        "imageLink": "https://zeljkoobrenovic.github.io/sokrates-media/aws/Amazon-Simple-Queue-Service.png"
+      },
+      {
+        "tag": "aws sns",
+        "patterns": [],
+        "excludePatterns": [],
+        "mainExtensions": [],
+        "anyExtensions": [],
+        "excludeExtensions": [],
+        "pathPatterns": [
+          ".*sns.*"
+        ],
+        "excludePathPatterns": [],
+        "imageLink": "https://zeljkoobrenovic.github.io/sokrates-media/aws/Amazon-Simple-Notification-Service.png"
+      },
+      {
+        "tag": "aws trusted advisor",
+        "patterns": [],
+        "excludePatterns": [],
+        "mainExtensions": [],
+        "anyExtensions": [],
+        "excludeExtensions": [],
+        "pathPatterns": [
+          ".*trustedadvisor.*"
+        ],
+        "excludePathPatterns": [],
+        "imageLink": "https://zeljkoobrenovic.github.io/sokrates-media/aws/AWS-Trusted-Advisor.png"
+      },
+      {
+        "tag": "aws rds",
+        "patterns": [],
+        "excludePatterns": [],
+        "mainExtensions": [],
+        "anyExtensions": [],
+        "excludeExtensions": [],
+        "pathPatterns": [
+          ".*/rds.*"
+        ],
+        "excludePathPatterns": [],
+        "imageLink": "https://zeljkoobrenovic.github.io/sokrates-media/aws/Amazon-RDS.png"
       }
     ]
   }
