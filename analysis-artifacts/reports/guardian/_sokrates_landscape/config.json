@@ -76,6 +76,20 @@
         "[0-9]+[+]",
         ""
       ]
+    },
+    {
+      "op": "replace",
+      "params": [
+        "(\")",
+        ""
+      ]
+    },
+    {
+      "op": "replace",
+      "params": [
+        "(\\-?\\.)",
+        " "
+      ]
     }
   ],
   "showExtensionsOnFirstTab": true,

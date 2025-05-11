@@ -1,0 +1,12 @@
+{
+  "people": [
+    {
+      "name": "paul daniel dempsey",
+      "link": "",
+      "image": "",
+      "emailPatterns": [
+        "paul[-]daniel[-]dempsey.*"
+      ]
+    }
+  ]
+}
