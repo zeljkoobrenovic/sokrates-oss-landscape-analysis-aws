@@ -60,11 +60,29 @@
         .reportSubtitle {
             color: grey;
         }
+
+        .group {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            border: solid lightgrey 1px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 2px;
+            padding: 2px 20px 2px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            border: solid lightgrey 1px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 2px;
+            padding: 0;
+        }
     </style>
 </head>
-<body>
+<div>
 <h1 id="guardian-repository-dataset-analysis">Guardian Repository
     Dataset Analysis</h1>
+<div class="group">
 <h2 id="management-summary">Management Summary</h2>
 <p>The Guardian’s code repository landscape is diverse, with nearly 200
     repositories spanning various business domains and technical functions.
@@ -88,6 +106,8 @@
     needs. Addressing inactive projects, improving test coverage, and
     standardizing naming can help reduce technical debt and improve overall
     platform health.</p>
+</div>
+<div class="group">
 <h2 id="conceptual-grouping">Conceptual Grouping</h2>
 <p>Based on repository naming, the codebase can be grouped into key
     business and technical domains:</p>
@@ -237,6 +257,8 @@
 <p>These conceptual groupings show that the repositories cover
     everything from content creation and delivery, audience analytics,
     revenue products, to internal tooling and infrastructure.</p>
+</div>
+<div class="group">
 <h2 id="naming-patterns-and-inconsistencies">Naming Patterns and
     Inconsistencies</h2>
 <p><strong>Common Naming Patterns:</strong> Guardian repositories
@@ -335,6 +357,8 @@
     inconsistencies, though few, could slightly hinder discoverability or
     violate the principle of least surprise for developers navigating the
     repos.</p>
+</div>
+<div class="group">
 <h2 id="size-and-activity-analysis">Size and Activity Analysis</h2>
 <p>Analyzing lines of code, contributor counts, and recent commit
     activity reveals significant differences across the identified
@@ -483,6 +507,8 @@
     variance suggests where development effort is currently focused versus
     which parts of the codebase might be candidates for cleanup or
     archival.</p>
+</div>
+<div class="group">
 <h2 id="potentially-inactive-repositories">Potentially Inactive
     Repositories</h2>
 <p>Using criteria such as “no commits in the last year” and/or a last
@@ -537,6 +563,8 @@
     examples (interactive-boot-scripts, interactive templates, etc.) are
     those that clearly meet the criteria of having had no meaningful changes
     for a long time.</p>
+</div>
+<div class="group">
 <h2 id="potential-risks">Potential Risks</h2>
 <p>Based on the dataset analysis – considering repository sizes,
     activity levels, testing coverage, contributor counts, naming, and
@@ -681,14 +709,18 @@
         naming were inconsistent, that signal is lost and could hinder quick
         identification of who might maintain a given repo.</p></li>
 </ul>
+</div>
+<div class="group" style="padding-top: 20px">
 <p>In conclusion, the Guardian’s repository ecosystem is robust and
     covers a wide range of needs, but it is not without areas of concern.
     Active management of legacy projects, fostering shared ownership of
     smaller projects, enforcing good testing practices, streamlining tech
-    choices, and consistent conventions will all help reduce these risks. By
-    addressing the highlighted issues – such as injecting life into or
+    choices, and consistent conventions will all help reduce these risks.
+
+    <br><br>By addressing the highlighted issues – such as injecting life into or
     retiring stale repos, adding tests to critical low-test code, and
     auditing security on older code – the organization can lower the chances
     of outages, security incidents, or team friction in the future.</p>
+</div>
 </body>
 </html>
