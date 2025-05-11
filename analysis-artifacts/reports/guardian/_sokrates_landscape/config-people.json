@@ -1,0 +1,12 @@
+{
+  "people": [
+    {
+      "name": "lakshmirpillai",
+      "link": "",
+      "image": "",
+      "emailPatterns": [
+        ".*luxmi r pillai.*"
+      ]
+    }
+  ]
+}
