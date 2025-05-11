@@ -372,7 +372,7 @@
           ".*lambda.*"
         ],
         "excludePathPatterns": [],
-        "imageLink": "https://zeljkoobrenovic.github.io/sokrates-media/aws-Lambda.png"
+        "imageLink": "https://zeljkoobrenovic.github.io/sokrates-media/aws/AWS-Lambda.png"
       },
       {
         "tag": "aws ec2",
