@@ -1,114 +1,88 @@
 {
-  "metadata": {
-    "name": "The Guardian OSS Landscape",
-    "description": "",
-    "tooltip": "",
-    "logoLink": "https://avatars.githubusercontent.com/guardian",
-    "links": [
-      {
-        "label": "github.com/guardian",
-        "href": "https://github.com/guardian"
-      }
-    ]
+  "metadata" : {
+    "name" : "The Guardian OSS Landscape",
+    "description" : "",
+    "tooltip" : "",
+    "logoLink" : "https://avatars.githubusercontent.com/guardian",
+    "links" : [ {
+      "label" : "github.com/guardian",
+      "href" : "https://github.com/guardian"
+    } ]
   },
-  "analysisRoot": ".",
-  "repositoryReportsUrlPrefix": "../",
-  "parentUrl": "https://sokrates.dev/",
-  "breadcrumbs": [
-    {
-      "label": "Sokrates Examples",
-      "href": "https://sokrates.dev/"
-    }
-  ],
-  "extensionThresholdLoc": 0,
-  "repositoryThresholdLocMain": 0,
-  "repositoryThresholdContributors": 2,
-  "contributorThresholdCommits": 2,
-  "ignoreRepositoriesLastUpdatedBefore": "",
-  "commitsMaxYears": 10,
-  "significantContributorMinCommitDaysPerYear": 10,
-  "anonymizeContributors": false,
-  "showRepositoryControls": true,
-  "repositoriesShortListLimit": 100,
-  "repositoriesListLimit": 1000,
-  "repositoriesHistoryLimit": 30,
-  "contributorsListLimit": 1000,
-  "contributorLinkTemplate": "",
-  "contributorAvatarLinkTemplate": "https://avatars.githubusercontent.com/${contributorid}",
-  "ignoreContributors": [
-  ],
-  "ignoreExtensions": [
-    "txt"
-  ],
-  "includeOnlyOneRepositoryWithSameName": true,
-  "mergeExtensions": [
-    {
-      "primary": "yaml",
-      "secondary": "yml"
-    },
-    {
-      "primary": "erl",
-      "secondary": "hrml"
-    },
-    {
-      "primary": "erl",
-      "secondary": "escript"
-    }
-  ],
-  "transformContributorEmails": [
-    {
-      "op": "replace",
-      "params": [
-        "[@].*",
-        ""
-      ]
-    },
-    {
-      "op": "replace",
-      "params": [
-        "[0-9]+[+]",
-        ""
-      ]
-    },
-    {
-      "op": "replace",
-      "params": [
-        "(\"|“)",
-        ""
-      ]
-    },
-    {
-      "op": "replace",
-      "params": [
-        "(\\-|\\.|_)",
-        " "
-      ]
-    }
-  ],
-  "bots": [
-    "svcscm@.*",
-    ".*\\[bot\\].*",
-    ".*[-]infra[@].*",
-    ".*[-]bot[@].*",
-    "github.*"
-  ],
-  "showExtensionsOnFirstTab": true,
-  "showContributorsTrendsOnFirstTab": true,
-  "maxSublandscapeDepth": 0,
-  "iFramesAtStart": [],
-  "iFrames": [
-    {
-      "title": "About this Site",
-      "src": "https://www.sokrates.dev/assets/docs/github-org-analysis.html",
-      "style": "height: 120px; width: 100%; margin-bottom: 0px; padding: 0;",
-      "scrolling": false,
-      "moreInfoLink": ""
-    }
-  ],
-  "iFramesRepositoriesAtStart": [],
-  "iFramesRepositories": [],
-  "iFramesContributorsAtStart": [],
-  "iFramesContributors": [],
-  "customTabs": [],
-  "customHtmlReportHeaderFragment": "<!-- Global site tag (gtag.js) - Google Analytics -->\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-129891352-1\"></script>\n  <script>\n    window.dataLayer = window.dataLayer || [];\n\n    function gtag() {\n      dataLayer.push(arguments);\n    }\n\n    gtag('js', new Date());\n    gtag('config', 'UA-129891352-1');\n  </script>"
+  "analysisRoot" : ".",
+  "repositoryReportsUrlPrefix" : "../",
+  "parentUrl" : "https://sokrates.dev/",
+  "breadcrumbs" : [ {
+    "label" : "Sokrates Examples",
+    "href" : "https://sokrates.dev/"
+  } ],
+  "extensionThresholdLoc" : 0,
+  "repositoryThresholdLocMain" : 0,
+  "repositoryThresholdContributors" : 2,
+  "contributorThresholdCommits" : 2,
+  "ignoreRepositoriesLastUpdatedBefore" : "",
+  "commitsMaxYears" : 10,
+  "significantContributorMinCommitDaysPerYear" : 10,
+  "anonymizeContributors" : false,
+  "showRepositoryControls" : true,
+  "repositoriesShortListLimit" : 100,
+  "repositoriesListLimit" : 1000,
+  "repositoriesHistoryLimit" : 30,
+  "contributorsListLimit" : 1000,
+  "contributorLinkTemplate" : "",
+  "contributorAvatarLinkTemplate" : "https://avatars.githubusercontent.com/${contributorid}",
+  "ignoreContributors" : [ ],
+  "bots" : [ "svcscm@.*", ".*\\[bot\\].*", ".*[-]infra[@].*", ".*[-]bot[@].*", "github.*" ],
+  "tagContributors" : [ ],
+  "ignoreExtensions" : [ "txt" ],
+  "includeOnlyOneRepositoryWithSameName" : true,
+  "mergeExtensions" : [ {
+    "primary" : "yaml",
+    "secondary" : "yml"
+  }, {
+    "primary" : "erl",
+    "secondary" : "hrml"
+  }, {
+    "primary" : "erl",
+    "secondary" : "escript"
+  } ],
+  "transformContributorEmails" : [ {
+    "op" : "replace",
+    "params" : [ "[@].*", "" ]
+  }, {
+    "op" : "replace",
+    "params" : [ "[0-9]+[+]", "" ]
+  }, {
+    "op" : "replace",
+    "params" : [ "(\"|“)", "" ]
+  }, {
+    "op" : "replace",
+    "params" : [ "(\\-|\\.|_)", " " ]
+  } ],
+  "showExtensionsOnFirstTab" : true,
+  "showContributorsTrendsOnFirstTab" : true,
+  "maxSublandscapeDepth" : 0,
+  "iFramesAtStart" : [ ],
+  "iFrames" : [ {
+    "title" : "About this Site",
+    "src" : "https://www.sokrates.dev/assets/docs/github-org-analysis.html",
+    "style" : "height: 120px; width: 100%; margin-bottom: 0px; padding: 0;",
+    "scrolling" : false,
+    "moreInfoLink" : ""
+  } ],
+  "iFramesRepositoriesAtStart" : [ ],
+  "iFramesRepositories" : [ ],
+  "iFramesContributorsAtStart" : [ ],
+  "iFramesContributors" : [ ],
+  "customTabs" : [ {
+    "name" : "Summary",
+    "iFrames" : [ {
+      "title" : "",
+      "src" : "docs/summary.html",
+      "style" : "height: calc(100vh - 280px); width: 100%; margin-bottom: 0px; padding: 0;",
+      "scrolling" : true,
+      "moreInfoLink" : ""
+    } ]
+  } ],
+  "customHtmlReportHeaderFragment" : "<!-- Global site tag (gtag.js) - Google Analytics -->\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-129891352-1\"></script>\n  <script>\n    window.dataLayer = window.dataLayer || [];\n\n    function gtag() {\n      dataLayer.push(arguments);\n    }\n\n    gtag('js', new Date());\n    gtag('config', 'UA-129891352-1');\n  </script>"
 }
