@@ -39,8 +39,6 @@
   ],
   "ignoreExtensions": [
     "txt",
-    "yaml",
-    "yml"
   ],
   "includeOnlyOneRepositoryWithSameName": true,
   "mergeExtensions": [

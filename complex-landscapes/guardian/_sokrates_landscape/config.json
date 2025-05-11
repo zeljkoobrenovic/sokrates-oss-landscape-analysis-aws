@@ -36,16 +36,9 @@
   "contributorLinkTemplate": "",
   "contributorAvatarLinkTemplate": "https://avatars.githubusercontent.com/${contributorid}",
   "ignoreContributors": [
-    "svcscm@.*",
-    ".*\\[bot\\].*",
-    ".*[-]infra[@].*",
-    ".*[-]bot[@].*",
-    "github.*"
   ],
   "ignoreExtensions": [
     "txt",
-    "yaml",
-    "yml"
   ],
   "includeOnlyOneRepositoryWithSameName": true,
   "mergeExtensions": [
@@ -76,7 +69,28 @@
         "[0-9]+[+]",
         ""
       ]
+    },
+    {
+      "op": "replace",
+      "params": [
+        "(\"|“)",
+        ""
+      ]
+    },
+    {
+      "op": "replace",
+      "params": [
+        "(\\-|\\.|_)",
+        " "
+      ]
     }
+  ],
+  "bots": [
+    "svcscm@.*",
+    ".*\\[bot\\].*",
+    ".*[-]infra[@].*",
+    ".*[-]bot[@].*",
+    "github.*"
   ],
   "showExtensionsOnFirstTab": true,
   "showContributorsTrendsOnFirstTab": true,

@@ -1,11 +1,11 @@
 {
   "people": [
     {
-      "name": "paul daniel dempsey",
+      "name": "lakshmirpillai",
       "link": "",
       "image": "",
       "emailPatterns": [
-        "paul[-]daniel[-]dempsey.*"
+        ".*luxmi.*"
       ]
     }
   ]
