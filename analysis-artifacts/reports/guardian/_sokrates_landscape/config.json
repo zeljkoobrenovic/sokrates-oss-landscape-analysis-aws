@@ -38,7 +38,7 @@
   "ignoreContributors": [
   ],
   "ignoreExtensions": [
-    "txt",
+    "txt"
   ],
   "includeOnlyOneRepositoryWithSameName": true,
   "mergeExtensions": [
