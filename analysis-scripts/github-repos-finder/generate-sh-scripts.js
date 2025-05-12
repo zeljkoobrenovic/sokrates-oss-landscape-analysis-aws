@@ -138,6 +138,7 @@ function createPayloadsJson(org, activeRepos) {
     payloadsWrapper.finalPayloads.push({
         "COMMAND": "init-landscape",
         "S3_FOLDER_URI": "s3://sokrates-gallery/" + org,
+        "LANDSCAPE_NAME": org
     });
     payloadsIdsWrapper.finalPayloads.push(org);
     fs.writeFileSync(payloadsFolder + '/payloads.json', JSON.stringify(payloadsWrapper, null, 2));
