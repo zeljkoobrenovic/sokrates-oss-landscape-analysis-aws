@@ -2,4 +2,4 @@
 # Parameters via environment variables:
 # - $DISTRIBUTION_ID: The ID of the CloudFront distribution to invalidate.
 
-aws cloudfront innvalidatee-distribution --distribution-id $DISTRIBUTION_ID --paths "/*"
+aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"

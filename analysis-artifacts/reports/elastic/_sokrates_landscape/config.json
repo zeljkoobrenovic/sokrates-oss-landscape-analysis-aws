@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "name": "Elastic OSS Landscape",
+    "name": "Microsoft Azure OSS Landscape",
     "description": "",
     "tooltip": "",
-    "logoLink": "https://avatars.githubusercontent.com/elastic",
+    "logoLink": "https://avatars.githubusercontent.com/azure",
     "links": [
       {
-        "label": "github.com/elastic",
-        "href": "https://github.com/elastic"
+        "label": "github.com/azure",
+        "href": "https://github.com/azure"
       }
     ]
   },
