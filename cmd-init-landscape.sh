@@ -12,12 +12,12 @@ echo "aws s3 cp all-reports.zip S3_FOLDER_URI/all-reports.zip"
 aws s3 cp all-reports.zip $S3_FOLDER_URI/all-reports.zip
 
 if [[ -z "${LANDSCAPE_NAME}" ]]; then
-  echo "Not using a pre-defined landscapoe settings"
+  echo "Not using a pre-defined landscape settings"
 else
-  if [ -d /app/analysis-artifacts/$LANDSCAPE_NAME/_sokrates_landscape/ ]; then
+  if [ -d /app/analysis-artifacts/reports/$LANDSCAPE_NAME/_sokrates_landscape/ ]; then
     rm -rf _sokrates_landscape
     mkdir _sokrates_landscape
-    cp -r /app/analysis-artifacts/$LANDSCAPE_NAME/_sokrates_landscape/ _sokrates_landscape/
+    cp -r /app/analysis-artifacts/reports/$LANDSCAPE_NAME/_sokrates_landscape/ _sokrates_landscape/
   fi
 fi
 
