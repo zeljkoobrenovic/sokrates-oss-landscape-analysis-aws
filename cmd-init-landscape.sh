@@ -15,9 +15,12 @@ if [[ -z "${LANDSCAPE_NAME}" ]]; then
   echo "Not using a pre-defined landscape settings"
 else
   if [ -d /app/analysis-artifacts/reports/$LANDSCAPE_NAME/_sokrates_landscape/ ]; then
+    echo "Using a pre-defined landscape settings from /app/analysis-artifacts/reports/$LANDSCAPE_NAME/_sokrates_landscape/"
     rm -rf _sokrates_landscape
     mkdir _sokrates_landscape
     cp -r /app/analysis-artifacts/reports/$LANDSCAPE_NAME/_sokrates_landscape/ _sokrates_landscape/
+  else
+    echo "ERROR: A pre-defined landscape settings not found in /app/analysis-artifacts/reports/$LANDSCAPE_NAME/_sokrates_landscape/"
   fi
 fi
 
