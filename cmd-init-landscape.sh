@@ -5,11 +5,12 @@ echo "aws s3 cp $S3_FOLDER_URI ."
 aws s3 cp $S3_FOLDER_URI . --recursive --only-show-errors
 rm all-reports.zip
 
-echo "zip -q -r all-reports.zip ."
-zip -q -r all-reports.zip .
+echo "zip -q -r all-reports.zip"
+zip -q -r all-reports.zip
 
 echo "aws s3 cp all-reports.zip S3_FOLDER_URI/all-reports.zip"
 aws s3 cp all-reports.zip $S3_FOLDER_URI/all-reports.zip
+rm all-reports.zip
 
 if [[ -z "${LANDSCAPE_NAME}" ]]; then
   echo "Not using a pre-defined landscape settings"

@@ -1,10 +1,10 @@
 {
   "teams": [
     {
-      "name": "Elastic",
+      "name": "Microsoft",
       "description": "",
       "emailPatterns": [
-        ".*[@]elastic[.].*"
+        ".*[@]microsoft[.].*"
       ]
     }
   ]
