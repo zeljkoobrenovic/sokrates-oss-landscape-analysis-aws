@@ -1,10 +1,10 @@
 {
   "teams": [
     {
-      "name": "Anthropics",
+      "name": "Alibaba",
       "description": "",
       "emailPatterns": [
-        ".*[@]anthropic[.].*"
+        ".*[@]alibaba[.].*"
       ]
     }
   ]
