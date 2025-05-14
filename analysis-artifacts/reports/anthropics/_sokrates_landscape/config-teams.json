@@ -1,0 +1,11 @@
+{
+  "teams": [
+    {
+      "name": "Anthropics",
+      "description": "",
+      "emailPatterns": [
+        ".*[@]anthropics[.].*"
+      ]
+    }
+  ]
+}
