@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "name": "Alibaba Cloud OSS",
+    "name": "Alibaba OSS Landscape",
     "description": "",
     "tooltip": "",
-    "logoLink": "https://avatars.githubusercontent.com/aliyun",
+    "logoLink": "https://avatars.githubusercontent.com/alibaba",
     "links": [
       {
-        "label": "github.com/aliyun",
-        "href": "https://github.com/aliyun"
+        "label": "github.com/alibaba",
+        "href": "https://github.com/alibaba"
       }
     ]
   },
