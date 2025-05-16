@@ -165,4 +165,4 @@ const createScripts = function (org) {
 
 const orgs = config.gitlabOrgs;
 
-orgs.forEach(org => createScripts(org.replace('.', '-')));
+orgs.forEach(org => createScripts(org));
