@@ -117,23 +117,24 @@ const payloadsIdsWrapper = {
 
 function createPayloadsJson(org, activeRepos) {
     activeRepos.forEach(repo => {
+        const safeName = repo.name.replace(/( |\,|\.)/g, '_');
+
         let description = repo.description ? repo.description : " ";
         description = description.replace(/\)/g, "&rpar;");
         description = description.replace(/\(/g, "&lpar;");
         description = description.replace(/\'/g, "&apos;");
-        let id = org + ' / ' + repo.name;
         const payload = {
             "COMMAND": "analyze-git-repo",
             "GIT_REPO_URL": repo.clone_url,
-            "S3_FOLDER_URI": "s3://sokrates-gallery/" + org + '/' + repo.name,
-            "REPO_NAME": id,
+            "S3_FOLDER_URI": "s3://sokrates-gallery/" + org + '/' + safeName,
+            "REPO_NAME": org + ' / ' + repo.name,
             "REPO_LOGO": repo.avatar_url,
             "REPO_DESCRIPTION": description
         };
         payloadsWrapper.payloads.push(payload);
-        payloadsIdsWrapper.payloads.push(org + '/' + repo.name);
+        payloadsIdsWrapper.payloads.push(org + '/' + safeName);
         fs.mkdirSync(payloadsFolder + '/cache/' + org, {recursive: true});
-        fs.writeFileSync(payloadsFolder + '/cache/' + org + '/' + repo.name, JSON.stringify(payload, null, 2));
+        fs.writeFileSync(payloadsFolder + '/cache/' + org + '/' + safeName, JSON.stringify(payload, null, 2));
     });
     payloadsWrapper.finalPayloads.push({
         "COMMAND": "init-landscape",

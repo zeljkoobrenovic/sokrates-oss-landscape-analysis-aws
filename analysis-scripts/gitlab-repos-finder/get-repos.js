@@ -53,7 +53,7 @@ const saveRepositories = function (org, next) {
                     if (!fs.existsSync(githubRepoDataFolder)) fs.mkdirSync(githubRepoDataFolder, {recursive: true});
                     let mappedData = repos.map(repo => {
                         return {
-                            name: repo.name.replace(/( |\,|\.)/g, '_'),
+                            name: repo.name,
                             description: repo.description,
                             html_url: repo.web_url,
                             clone_url: repo.http_url_to_repo,
