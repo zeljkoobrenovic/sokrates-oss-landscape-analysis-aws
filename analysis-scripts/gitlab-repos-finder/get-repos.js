@@ -74,6 +74,7 @@ const saveRepositories = function (org, next) {
                         .filter(repo => !shouldIgnore(org, repo.name));
 
                     console.log(activeData.length);
+                    console.log(githubRepoDataFolder + org + '-active.json';
 
                     fs.writeFileSync(githubRepoDataFolder + org + '-active.json',
                         JSON.stringify(activeData, null, 2));
