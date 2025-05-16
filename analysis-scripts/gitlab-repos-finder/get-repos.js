@@ -6,6 +6,7 @@ const config = JSON.parse(fs.readFileSync('/app/analysis-scripts/config-gitlab.j
 
 const gitRepoPrefix = 'https://gitlab.com/api/v4';
 const startDate = config.reposUpdatedAfter;
+console.log(startDate);
 // const token = 'token ' + secrets.githubToken;
 
 // const headers = {headers: {'user-agent': 'node.js', 'Authorization': token}};
