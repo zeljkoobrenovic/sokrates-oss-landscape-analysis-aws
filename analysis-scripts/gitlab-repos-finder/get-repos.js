@@ -6,6 +6,7 @@ const fs = require('fs');
 
 const gitRepoPrefix = 'https://gitlab.com/api/v4';
 // const startDate = config.reposUpdatedAfter;
+const startDate = '2024-01-01';
 // const token = 'token ' + secrets.githubToken;
 
 // const headers = {headers: {'user-agent': 'node.js', 'Authorization': token}};
