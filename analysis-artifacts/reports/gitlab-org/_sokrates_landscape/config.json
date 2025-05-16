@@ -36,7 +36,10 @@
     ".*[-]bot[@].*",
     "github-actions\\@.*",
     "awstools\\@.*",
-    ".*\\-automation[@].*"
+    ".*\\-automation[@].*",
+    ".*-tools[@].*",
+    ".*-renovate[@].*",
+    ".*_bot_.*"
   ],
   "tagContributors": [],
   "ignoreExtensions": [],
