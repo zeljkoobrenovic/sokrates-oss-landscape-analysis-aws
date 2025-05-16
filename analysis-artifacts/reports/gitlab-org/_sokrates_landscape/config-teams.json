@@ -1,0 +1,11 @@
+{
+  "teams": [
+    {
+      "name": "GitLab",
+      "description": "",
+      "emailPatterns": [
+        ".*[@]gitlab.*"
+      ]
+    }
+  ]
+}
