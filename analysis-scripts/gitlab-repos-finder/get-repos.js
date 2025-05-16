@@ -73,6 +73,8 @@ const saveRepositories = function (org, next) {
                         .filter(repo => repo.updated_at >= startDate)
                         .filter(repo => !shouldIgnore(org, repo.name));
 
+                    console.log(activeData.length);
+
                     fs.writeFileSync(githubRepoDataFolder + org + '-active.json',
                         JSON.stringify(activeData, null, 2));
 
