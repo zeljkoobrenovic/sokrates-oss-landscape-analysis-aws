@@ -61,7 +61,7 @@ const saveRepositories = function (org, next) {
                             archived: repo.archived,
                             language: repo.language,
                             created_at: repo.created_at,
-                            updated_at: repo.last_activity_at,
+                            updated_at: repo.avatar_url,
                             pushed_at: '',
                             watchers: []
                         }
