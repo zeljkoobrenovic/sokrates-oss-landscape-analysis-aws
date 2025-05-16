@@ -4,7 +4,7 @@ const fs = require('fs');
 const config = JSON.parse(fs.readFileSync('/app/analysis-scripts/config-gitlab.json'));
 // const secrets = JSON.parse(fs.readFileSync('/app/analysis-scripts/secrets.json'));
 
-const gitRepoPrefix = 'https://gitlab.com/api/v4';
+const apiPrefix = 'https://gitlab.com/api/v4/groups/';
 const startDate = config.reposUpdatedAfter;
 console.log(startDate);
 // const token = 'token ' + secrets.githubToken;
@@ -33,7 +33,7 @@ const shouldIgnore = function (org, repo) {
 const saveRepositories = function (org, next) {
     let repos = [];
     const download = function (page) {
-        const url = 'https://' + org + '/api/v4/projects?per_page=100&page=' + page;
+        const url = apiPrefix + org + '/projects?per_page=100&page=' + page;
         console.log(url);
         https.get(url, headers, function (response) {
             let data = '';
