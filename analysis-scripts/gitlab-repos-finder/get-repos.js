@@ -69,7 +69,7 @@ const saveRepositories = function (org, next) {
                     const activeData = mappedData
                         .filter(repo => repo.language !== null)
                         .filter(repo => !repo.archived)
-                        .filter(repo => repo.pushed_at >= startDate)
+                        .filter(repo => repo.updated_at >= startDate)
                         .filter(repo => !shouldIgnore(org, repo.name));
 
                     fs.writeFileSync(githubRepoDataFolder + org + '-active.json',
@@ -79,7 +79,7 @@ const saveRepositories = function (org, next) {
                     reposCountActive += reposPage
                         .filter(repo => repo.language !== null)
                         .filter(repo => !repo.archived)
-                        .filter(repo => repo.pushed_at >= startDate)
+                        .filter(repo => repo.updated_at >= startDate)
                         .filter(repo => !shouldIgnore(org, repo.name)).length;
 
                     download(page + 1);
