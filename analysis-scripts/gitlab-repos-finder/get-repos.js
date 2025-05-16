@@ -1,12 +1,11 @@
 const https = require('https');
 const fs = require('fs');
 
-// const config = JSON.parse(fs.readFileSync('/app/analysis-scripts/config.json'));
+const config = JSON.parse(fs.readFileSync('/app/analysis-scripts/config-gitlab.json'));
 // const secrets = JSON.parse(fs.readFileSync('/app/analysis-scripts/secrets.json'));
 
 const gitRepoPrefix = 'https://gitlab.com/api/v4';
-// const startDate = config.reposUpdatedAfter;
-const startDate = '2025-01-01';
+const startDate = config.reposUpdatedAfter;
 // const token = 'token ' + secrets.githubToken;
 
 // const headers = {headers: {'user-agent': 'node.js', 'Authorization': token}};
@@ -15,17 +14,17 @@ const headers = {headers: {'user-agent': 'node.js'}};
 let reposCount = 0;
 let reposCountActive = 0;
 
-const shouldIgnore = function(org, repo) {
+const shouldIgnore = function (org, repo) {
     let ignore = false;
-    // config.ignore.forEach(ignoreRule => {
-    //     if (ignoreRule.org === '' || org.match(new RegExp(ignoreRule.org, 'gi'))) {
-    //         if (ignoreRule.repo === '' || repo.match(new RegExp(ignoreRule.repo, 'gi'))) {
-    //             console.log('Ignoring ' + org + ' / ' + repo);
-    //             ignore = true;
-    //             return;
-    //         }
-    //     }
-    // });
+    config.ignore.forEach(ignoreRule => {
+        if (ignoreRule.org === '' || org.match(new RegExp(ignoreRule.org, 'gi'))) {
+            if (ignoreRule.repo === '' || repo.match(new RegExp(ignoreRule.repo, 'gi'))) {
+                console.log('Ignoring ' + org + ' / ' + repo);
+                ignore = true;
+                return;
+            }
+        }
+    });
 
     return ignore;
 }
@@ -43,7 +42,7 @@ const saveRepositories = function (org, next) {
             });
 
             response.on('end', () => {
-                const reposPage = JSON.parse(data);
+                const reposPage = data ? JSON.parse(data) : [];
                 if (reposPage.length > 0) {
                     console.log(reposPage.length);
                     repos = repos.concat(reposPage);
@@ -93,7 +92,7 @@ const saveRepositories = function (org, next) {
     download(1);
 }
 
-const orgs = ['gitlab.com'];
+const orgs = config.gitlabOrgs;
 
 const callProcessing = function () {
     if (orgs.length > 0) {

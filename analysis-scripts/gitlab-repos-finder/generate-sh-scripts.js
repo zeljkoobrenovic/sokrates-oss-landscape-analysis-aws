@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const config = JSON.parse(fs.readFileSync('/app/analysis-scripts/config.json'));
+const config = JSON.parse(fs.readFileSync('/app/analysis-scripts/config-gitlab.json'));
 
 const runAnalysisLinePrefix = 'bash /app/analysis-scripts/scripts/analysis/run-analysis-from-zip.sh ';
 const cloneAndDownloadLinePrefix = 'bash /app/analysis-scripts/scripts/git/clone-and-zip.sh ';
@@ -163,6 +163,6 @@ const createScripts = function (org) {
     createPayloadsJson(org, activeRepos);
 }
 
-const orgs = config.githubOrgs;
+const orgs = config.gitlabOrgs;
 
-orgs.forEach(org => createScripts(org));
+orgs.forEach(org => createScripts(org.replace('.', '-')));

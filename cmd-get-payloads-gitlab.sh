@@ -1,6 +1,6 @@
 mkdir -p /app/analysis-scripts/generated/payloads/cache
 
-echo "$SOKRATES_CONFIG" > /app/analysis-scripts/config.json
+echo "$SOKRATES_CONFIG" > /app/analysis-scripts/config-gitlab.json
 
 bash run-generate-scripts-gitlab.sh
 
