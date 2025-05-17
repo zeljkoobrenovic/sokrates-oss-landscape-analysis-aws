@@ -55,6 +55,19 @@
   "iFramesRepositories": [],
   "iFramesContributorsAtStart": [],
   "iFramesContributors": [],
-  "customTabs": [],
+  "customTabs": [
+    {
+      "name": "Summary",
+      "iFrames": [
+        {
+          "title": "",
+          "src": "docs/summary.html",
+          "style": "height: calc(100vh - 280px); width: 100%; margin-bottom: 0px; padding: 0;",
+          "scrolling": true,
+          "moreInfoLink": ""
+        }
+      ]
+    }
+  ],
   "customHtmlReportHeaderFragment": ""
 }

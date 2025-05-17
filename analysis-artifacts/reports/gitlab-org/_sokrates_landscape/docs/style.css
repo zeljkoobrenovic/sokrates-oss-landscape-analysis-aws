@@ -1,0 +1,72 @@
+body {
+    font-family: Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 42em;
+    font-size: 110%;
+    line-height: 1.5em;
+}
+
+table {
+    color: #333;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+    border: 1px solid #CCC;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+th {
+    background: #F3F3F3;
+    font-weight: bold;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+td {
+    background: #FFFFFF;
+    text-align: left;
+}
+
+h3 {
+    margin-top: 0
+}
+
+h1 {
+    margin-bottom: 6px;
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.reportSubtitle {
+    color: grey;
+}
+
+.group {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: solid lightgrey 1px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
+    padding: 2px 20px 2px;
+}
+
+.section {
+    margin-bottom: 30px;
+    border: solid lightgrey 1px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
+    padding: 0;
+}
