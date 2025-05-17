@@ -6,7 +6,7 @@ aws s3 cp $S3_FOLDER_URI . --recursive --only-show-errors
 rm all-reports.zip
 
 echo "zip -q -r all-reports.zip ."
-zip -q -r -j all-reports.zip .
+zip -q -r all-reports.zip .
 
 echo "aws s3 cp all-reports.zip S3_FOLDER_URI/all-reports.zip"
 aws s3 cp all-reports.zip $S3_FOLDER_URI/all-reports.zip
