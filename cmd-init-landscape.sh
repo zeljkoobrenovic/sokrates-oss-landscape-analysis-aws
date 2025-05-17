@@ -8,7 +8,7 @@ rm all-reports.zip
 echo "zip -q -r all-reports.zip ."
 zip -q -r all-reports.zip .
 
-echo "aws s3 cp all-reports.zip S3_FOLDER_URI/all-reports.zip"
+echo "aws s3 cp all-reports.zip $S3_FOLDER_URI/all-reports.zip"
 aws s3 cp all-reports.zip $S3_FOLDER_URI/all-reports.zip
 rm all-reports.zip
 
