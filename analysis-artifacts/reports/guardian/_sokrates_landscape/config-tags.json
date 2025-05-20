@@ -464,6 +464,20 @@
         ],
         "excludePathPatterns": [],
         "imageLink": "https://zeljkoobrenovic.github.io/sokrates-media/aws/Amazon-RDS.png"
+      },
+      {
+        "tag": "elasticsearch",
+        "patterns": [],
+        "excludePatterns": [],
+        "mainExtensions": [],
+        "anyExtensions": [],
+        "excludeExtensions": [],
+        "pathPatterns": [
+          ".*elastic[-]search.*",
+          ".*elasticsearch.*"
+        ],
+        "excludePathPatterns": [],
+        "imageLink": "https://zeljkoobrenovic.github.io/sokrates-media/general/elasticsearch.png"
       }
     ]
   }
