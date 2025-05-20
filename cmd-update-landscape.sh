@@ -9,6 +9,9 @@ unzip -q all-reports.zip
 
 cp -rf /app/analysis-artifacts/reports/$LANDSCAPE_NAME/* /app/temp
 
+pwd
+ls -l _sokrates_landscape/
+
 echo "-jar -Xmx40g /app/sokrates-LATEST.jar updateLandscape"
 java -jar -Xmx40g /app/sokrates-LATEST.jar updateLandscape
 
