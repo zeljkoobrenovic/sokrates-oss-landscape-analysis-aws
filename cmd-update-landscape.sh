@@ -7,7 +7,8 @@ aws s3 cp s3://sokrates-gallery/$LANDSCAPE_NAME/all-reports.zip .
 echo "unzip -q all-reports.zip"
 unzip -q all-reports.zip
 
-cd apps/analysis-artifacts/$LANDSCAPE_NAME
+cd apps/analysis-artifacts/reports/$LANDSCAPE_NAME
+
 ls -l
 
 cp -rf /app/analysis-artifacts/reports/$LANDSCAPE_NAME/* .
