@@ -473,8 +473,7 @@
         "anyExtensions": [],
         "excludeExtensions": [],
         "pathPatterns": [
-          ".*elastic[-]search.*",
-          ".*elasticsearch.*"
+          "(?i).*elastic[-]?search.*"
         ],
         "excludePathPatterns": [],
         "imageLink": "https://zeljkoobrenovic.github.io/sokrates-media/general/elasticsearch.png"
