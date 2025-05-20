@@ -13,4 +13,6 @@ echo "-jar -Xmx40g /app/sokrates-LATEST.jar updateLandscape"
 java -jar -Xmx40g /app/sokrates-LATEST.jar updateLandscape
 
 echo "s3 cp _sokrates_landscape/ s3://sokrates-gallery/$LANDSCAPE_NAME/_sokrates_landscape/ --recursive"
+pwd
+ls -l _sokrates_landscape/
 aws s3 cp _sokrates_landscape/ s3://sokrates-gallery/$LANDSCAPE_NAME/_sokrates_landscape/ --recursive
