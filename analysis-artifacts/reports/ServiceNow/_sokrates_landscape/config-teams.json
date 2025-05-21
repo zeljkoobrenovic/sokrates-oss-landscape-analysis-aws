@@ -1,10 +1,10 @@
 {
   "teams": [
     {
-      "name": "Mastra",
+      "name": "GitLab",
       "description": "",
       "emailPatterns": [
-        ".*mastra.*"
+        ".*[@]gitlab.*"
       ]
     }
   ]
