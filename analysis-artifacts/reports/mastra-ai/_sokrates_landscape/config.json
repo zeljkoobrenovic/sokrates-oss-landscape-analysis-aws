@@ -5,7 +5,7 @@
     "tooltip" : "",
     "logoLink" : "https://avatars.githubusercontent.com/mastra-ai",
     "links" : [ {
-      "label" : "github.com/mastra-ai",
+      "label" : "github.com/guardian",
       "href" : "https://github.com/mastra-ai"
     } ]
   },
@@ -74,15 +74,6 @@
   "iFramesRepositories" : [ ],
   "iFramesContributorsAtStart" : [ ],
   "iFramesContributors" : [ ],
-  "customTabs" : [ {
-    "name" : "Summary",
-    "iFrames" : [ {
-      "title" : "",
-      "src" : "docs/summary.html",
-      "style" : "height: calc(100vh - 280px); width: 100%; margin-bottom: 0px; padding: 0;",
-      "scrolling" : true,
-      "moreInfoLink" : ""
-    } ]
-  } ],
+  "customTabs" : [  ],
   "customHtmlReportHeaderFragment" : "<!-- Global site tag (gtag.js) - Google Analytics -->\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-129891352-1\"></script>\n  <script>\n    window.dataLayer = window.dataLayer || [];\n\n    function gtag() {\n      dataLayer.push(arguments);\n    }\n\n    gtag('js', new Date());\n    gtag('config', 'UA-129891352-1');\n  </script>"
 }
