@@ -1,0 +1,11 @@
+{
+  "teams": [
+    {
+      "name": "Mastra",
+      "description": "",
+      "emailPatterns": [
+        ".*mastra.*"
+      ]
+    }
+  ]
+}
