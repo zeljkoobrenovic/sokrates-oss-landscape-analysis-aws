@@ -3,7 +3,7 @@
     "name" : "Mastra OSS Landscape",
     "description" : "",
     "tooltip" : "",
-    "logoLink" : "https://avatars.githubusercontent.com/mastra-ai",
+    "logoLink" : "logo.png",
     "links" : [ {
       "label" : "github.com/guardian",
       "href" : "https://github.com/mastra-ai"
