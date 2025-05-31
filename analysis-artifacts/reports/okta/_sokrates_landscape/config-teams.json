@@ -1,0 +1,11 @@
+{
+  "teams": [
+    {
+      "name": "Okta",
+      "description": "",
+      "emailPatterns": [
+        ".*okta.*"
+      ]
+    }
+  ]
+}
