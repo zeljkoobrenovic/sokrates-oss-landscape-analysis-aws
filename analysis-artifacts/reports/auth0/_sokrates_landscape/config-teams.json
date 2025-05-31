@@ -1,0 +1,11 @@
+{
+  "teams": [
+    {
+      "name": "Auth0",
+      "description": "",
+      "emailPatterns": [
+        ".*auth0.*"
+      ]
+    }
+  ]
+}
