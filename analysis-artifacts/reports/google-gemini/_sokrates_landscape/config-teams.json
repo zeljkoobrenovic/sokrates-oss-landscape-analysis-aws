@@ -1,10 +1,10 @@
 {
   "teams": [
     {
-      "name": "cmsgov",
+      "name": "google",
       "description": "",
       "emailPatterns": [
-        ".*cms.*gov.*"
+        ".*google.*"
       ]
     }
   ]
