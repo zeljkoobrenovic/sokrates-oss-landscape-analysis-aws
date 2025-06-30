@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "name": "Hugging Face",
+    "description": "Hugging Face is a company that develops open-source tools and libraries for machine learning, particularly in the field of natural language processing (NLP). It is best known for its Transformers library, which provides pre-trained models for various NLP tasks such as text classification, translation, and question answering. The company also offers a platform for sharing and collaborating on machine learning models and datasets.",
+    "tooltip": "",
+    "logoLink": "https://avatars.githubusercontent.com/huggingface",
+    "links": [
+      {
+        "label": "github.com/huggingface",
+        "href": "https://github.com/huggingface"
+      }
+    ]
+  },
+  "analysisRoot": ".",
+  "repositoryReportsUrlPrefix": "../",
+  "parentUrl": "",
+  "breadcrumbs": [],
+  "extensionThresholdLoc": 0,
+  "repositoryThresholdLocMain": 0,
+  "repositoryThresholdContributors": 1,
+  "contributorThresholdCommits": 1,
+  "ignoreRepositoriesLastUpdatedBefore": "",
+  "commitsMaxYears": 10,
+  "significantContributorMinCommitDaysPerYear": 10,
+  "anonymizeContributors": false,
+  "showRepositoryControls": true,
+  "repositoriesShortListLimit": 100,
+  "repositoriesListLimit": 1000,
+  "repositoriesHistoryLimit": 30,
+  "contributorsListLimit": 1000,
+  "contributorLinkTemplate": "",
+  "contributorAvatarLinkTemplate": "",
+  "ignoreContributors": [],
+  "bots": [
+    ".*\\[bot\\].*",
+    ".*[-]bot[@].*",
+    "github-actions\\@.*",
+    "awstools\\@.*",
+    ".*\\-automation[@].*"
+  ],
+  "tagContributors": [],
+  "ignoreExtensions": [],
+  "includeOnlyOneRepositoryWithSameName": true,
+  "mergeExtensions": [],
+  "transformContributorEmails": [],
+  "showExtensionsOnFirstTab": true,
+  "showContributorsTrendsOnFirstTab": true,
+  "maxSublandscapeDepth": 0,
+  "iFramesAtStart": [],
+  "iFrames": [],
+  "iFramesRepositoriesAtStart": [],
+  "iFramesRepositories": [],
+  "iFramesContributorsAtStart": [],
+  "iFramesContributors": [],
+  "customTabs": [],
+  "customHtmlReportHeaderFragment": ""
+}
