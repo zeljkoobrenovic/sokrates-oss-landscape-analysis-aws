@@ -1,0 +1,11 @@
+{
+  "teams": [
+    {
+      "name": "cmsgov",
+      "description": "",
+      "emailPatterns": [
+        ".*cms.*gov.*"
+      ]
+    }
+  ]
+}
