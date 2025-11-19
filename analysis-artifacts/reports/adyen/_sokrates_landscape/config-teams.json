@@ -1,0 +1,11 @@
+{
+  "teams": [
+    {
+      "name": "Adyen",
+      "description": "",
+      "emailPatterns": [
+        ".*[@]adyen.*"
+      ]
+    }
+  ]
+}
