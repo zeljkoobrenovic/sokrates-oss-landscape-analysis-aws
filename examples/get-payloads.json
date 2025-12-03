@@ -1,12 +1,11 @@
 {
-  "payloads": [
-  ],
+  "payloads": [],
   "finalPayloads": [
     {
       "COMMAND": "get-payloads",
-      "LANDSCAPE_NAME": "adyen",
+      "LANDSCAPE_NAME": "PX4",
       "S3_FOLDER_URI": "s3://sokrates-gallery/_payloads/",
-      "SOKRATES_CONFIG": "{\"githubCloneUrl\": \"https://github.com\", \"githubApiUrl\": \"https://api.github.com\",\"reposUpdatedAfter\": \"2024-01-01\", \"javaOptions\": \"-Xmx40g\", \"githubOrgs\": [\"adyen\"], \"ignore\": []}"
+      "SOKRATES_CONFIG": "{\"githubCloneUrl\": \"https://github.com\", \"githubApiUrl\": \"https://api.github.com\",\"reposUpdatedAfter\": \"2024-01-01\", \"javaOptions\": \"-Xmx40g\", \"githubOrgs\": [\"PX4\"], \"ignore\": []}"
     }
   ]
 }
