@@ -1,0 +1,11 @@
+{
+  "teams": [
+    {
+      "name": "PX4",
+      "description": "",
+      "emailPatterns": [
+        ".*[@]px4.*"
+      ]
+    }
+  ]
+}

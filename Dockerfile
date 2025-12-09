@@ -1,7 +1,8 @@
+# Use Amazon Corretto 21 (Amazon Linux base)
 FROM amazoncorretto:21
 
-# Install necessary dependencies
-RUN apt-get update && apt-get install -y \
+# Install necessary dependencies (Amazon Linux uses yum)
+RUN yum update -y && yum install -y \
     curl \
     zip \
     unzip \
@@ -10,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     nodejs \
     npm \
     bash \
-    && rm -rf /var/lib/apt/lists/*
+    && yum clean all
 
 # Detect architecture and install appropriate AWS CLI version
 RUN if [ "$(uname -m)" = "aarch64" ] || [ "$(uname -m)" = "arm64" ]; then \
@@ -27,5 +28,5 @@ WORKDIR /app
 
 ADD start.sh start.sh
 
-# Set default command
+# Default command
 CMD ["bash", "start.sh"]

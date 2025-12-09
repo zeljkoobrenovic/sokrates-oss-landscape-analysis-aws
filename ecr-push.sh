@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Set variables
-#export AWS_REGION=your-region
-#export AWS_ACCOUNT_ID=your-aws-account-id
-#export ECR_REPOSITORY_NAME=sokrates-landscape
-#export IMAGE_TAG=latest
+export AWS_REGION=us-east-1
+export AWS_ACCOUNT_ID=604967711320
+export ECR_REPOSITORY_NAME=sokrates-landscape
+export IMAGE_TAG=latest
 
 # Create ECR repository (if it doesn't exist)
 aws ecr describe-repositories --repository-names $ECR_REPOSITORY_NAME --region $AWS_REGION || \
