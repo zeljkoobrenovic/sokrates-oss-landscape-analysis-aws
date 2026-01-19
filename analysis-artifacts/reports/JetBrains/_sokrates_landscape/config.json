@@ -36,7 +36,9 @@
     ".*[-]bot[@].*",
     "github-actions\\@.*",
     "awstools\\@.*",
-    ".*\\-automation[@].*"
+    ".*\\-automation[@].*",
+    ".*buildserver.*",
+    ".*builduser.*"
   ],
   "tagContributors": [],
   "ignoreExtensions": [],
