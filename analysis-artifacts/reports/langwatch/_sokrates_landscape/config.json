@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "name": "LangWatch",
+    "description": "",
+    "tooltip": "",
+    "logoLink": "https://avatars.githubusercontent.com/langwatch",
+    "links": [
+      {
+        "label": "github.com/langwatch",
+        "href": "https://github.com/langwatch"
+      }
+    ]
+  },
+  "analysisRoot": ".",
+  "repositoryReportsUrlPrefix": "../",
+  "parentUrl": "",
+  "breadcrumbs": [],
+  "extensionThresholdLoc": 0,
+  "repositoryThresholdLocMain": 0,
+  "repositoryThresholdContributors": 1,
+  "contributorThresholdCommits": 1,
+  "ignoreRepositoriesLastUpdatedBefore": "",
+  "commitsMaxYears": 10,
+  "significantContributorMinCommitDaysPerYear": 10,
+  "anonymizeContributors": false,
+  "showRepositoryControls": true,
+  "repositoriesShortListLimit": 100,
+  "repositoriesListLimit": 1000,
+  "repositoriesHistoryLimit": 30,
+  "contributorsListLimit": 1000,
+  "contributorLinkTemplate": "",
+  "contributorAvatarLinkTemplate": "",
+  "ignoreContributors": [],
+  "bots": [
+    ".*\\[bot\\].*",
+    ".*[-]bot[@].*",
+    "github-actions\\@.*",
+    "awstools\\@.*",
+    ".*\\-automation[@].*",
+    ".*buildserver.*",
+    ".*builduser.*"
+  ],
+  "tagContributors": [],
+  "ignoreExtensions": [],
+  "includeOnlyOneRepositoryWithSameName": true,
+  "mergeExtensions": [],
+  "transformContributorEmails": [],
+  "showExtensionsOnFirstTab": true,
+  "showContributorsTrendsOnFirstTab": true,
+  "maxSublandscapeDepth": 0,
+  "iFramesAtStart": [],
+  "iFrames": [],
+  "iFramesRepositoriesAtStart": [],
+  "iFramesRepositories": [],
+  "iFramesContributorsAtStart": [],
+  "iFramesContributors": [],
+  "customTabs": [],
+  "customHtmlReportHeaderFragment": ""
+}
