@@ -3,7 +3,7 @@
     "name": "OpenAI OSS Landscape",
     "description": "",
     "tooltip": "",
-    "logoLink": "https://avatars.githubusercontent.com/openai",
+    "logoLink": "logo.png",
     "links": [
       {
         "label": "github.com/openai",
