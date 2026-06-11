@@ -30,7 +30,7 @@ unzip -q /app/analysis-artifacts/archived-repos/$1/$2/repo.zip
 # init analysis (skip if the Sokrates config file is provided in the project)
 if [ ! -f _sokrates/config.json ]
 then
-  java -jar $SOKRATES_JAVA_OPTIONS $SOKRATES_JAR_PATH init -conventionsFile /app/analysis-scripts/scripts/analysis/sokrates_conventions.json -name "$1 / $2" -description "$4" -addLink $3 'GitHub Repo' -logoLink "https://avatars.githubusercontent.com/$1"
+  java -jar $SOKRATES_JAVA_OPTIONS $SOKRATES_JAR_PATH init -conventionsFile /app/analysis-scripts/scripts/analysis/sokrates_conventions.json -name "$1 / $2" -description "$4" -addLink $3 'GitHub Repo'
 fi
 
 # run analysis

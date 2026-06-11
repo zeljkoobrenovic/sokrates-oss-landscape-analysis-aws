@@ -127,7 +127,7 @@ function createPayloadsJson(org, activeRepos) {
             "GIT_REPO_URL": repo.clone_url,
             "S3_FOLDER_URI": "s3://sokrates-gallery/" + org + '/' + repo.name,
             "REPO_NAME": id,
-            "REPO_LOGO": "https://avatars.githubusercontent.com/" + org,
+            "REPO_LOGO": repo.avatar_url,
             "REPO_DESCRIPTION": description
         };
         payloadsWrapper.payloads.push(payload);
