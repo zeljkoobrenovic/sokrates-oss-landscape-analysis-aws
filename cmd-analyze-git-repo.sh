@@ -15,6 +15,9 @@ cd temp
 echo "java -jar -Xmx40g /app/sokrates-LATEST.jar extractGitHistory"
 java -jar -Xmx40g /app/sokrates-LATEST.jar extractGitHistory
 
+echo "java -jar -Xmx40g /app/sokrates-LATEST.jar updatePeopleConfigByUserName"
+java -jar -Xmx40g /app/sokrates-LATEST.jar updatePeopleConfigByUserName
+
 echo "java -jar -Xmx40g /app/sokrates-LATEST.jar init"
 java -jar -Xmx40g /app/sokrates-LATEST.jar init -conventionsFile /app/analysis-scripts/scripts/analysis/sokrates_conventions.json -name "$REPO_NAME" -description "$REPO_DESCRIPTION" -addLink $GIT_REPO_URL 'GitHub Repo' -logoLink "$REPO_LOGO"
 
